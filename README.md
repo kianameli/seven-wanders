@@ -96,6 +96,30 @@ const User = new Schema(
 
 ## MVP
 
+#### Planning
+
+- Team expectations
+- README.md
+- Component hierarchy
+- Wireframes
+
+#### Front end
+
+- React app
+- Use/render via API
+- Use react-router
+- Authentication
+
+#### Back end
+
+- Full CRUD via Express, Mongoose/MongoDB
+
+#### Deployment
+
+- Front end via Netlify
+- Back end via Heroku
+- MongoDB via MongoDB Atlas
+
 ## Post-MVP
 
 ## SWOT
