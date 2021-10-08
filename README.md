@@ -8,30 +8,30 @@ Seven Wanders is a travel blog where users can find and read user-submitted trav
 
 <details>
 <summary>Home</summary>
-![Home](readme-assets/wireframes/Home.png)
+![alt text](readme-assets/wireframes/Home.png)
 </details>
 <details>
 <summary>Explore</summary>
-![Explore](readme-assets/wireframes/Explore.png)
+![alt text](readme-assets/wireframes/Explore.png)
 </details>
 <details>
 <summary>Detail</summary>
-![Detail](readme-assets/wireframes/Detail.png)
+![alt text](readme-assets/wireframes/Detail.png)
 </details>
 <details>
 <summary>Create</summary>
-![Create](readme-assets/wireframes/Create.png)
+![alt text](readme-assets/wireframes/Create.png)
 </details>
 <details>
 <summary>Edit</summary>
-![Edit](readme-assets/wireframes/Edit.png)
+![alt text](readme-assets/wireframes/Edit.png)
 </details>
 <summary>Sign Up</summary>
-![Sign Up](readme-assets/wireframes/SignUp.png)
+![alt text](./readme-assets/wireframes/SignUp.png)
 </details>
 <details>
 <summary>Sign In</summary>
-![Sign In](readme-assets/wireframes/SignIn.png)
+![alt text](./readme-assets/wireframes/SignIn.png)
 </details>
 <details>
 
