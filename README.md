@@ -27,11 +27,11 @@ Seven Wanders is a travel blog where users can find and read user-submitted trav
 ![Edit](readme-assets/wireframes/Edit.png)
 </details>
 <summary>Sign Up</summary>
-![Sign Up](readme-assets/wireframes/Sign Up.png)
+![Sign Up](readme-assets/wireframes/SignUp.png)
 </details>
 <details>
 <summary>Sign In</summary>
-![Sign In](readme-assets/wireframes/Sign In.png)
+![Sign In](readme-assets/wireframes/SignIn.png)
 </details>
 <details>
 
