@@ -59,7 +59,36 @@ Seven Wanders is a travel blog where users can find and read user-submitted trav
 
 ## Schemas
 
-## API Endpoints
+### Story schema
+
+```
+const Story = new Schema(
+  {
+    location: { type: String, required: true },
+    country: { type: String, required: true },
+    continent: { type: String, required: true },
+    title: { type: String, required: true },
+    author: { type: String, required: true },
+    userID: { type: String, required: true }, //key to user in users table
+    story: { type: String, required: true },
+    imageURL: { type: String, required: true },
+  },
+  { timestamps: true }
+);
+```
+
+### User schema
+
+```
+const User = new Schema(
+  {
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+    password_digest: { type: String, required: true, select: false },
+  },
+  { timestamps: true }
+);
+```
 
 ## Team Expectations
 
