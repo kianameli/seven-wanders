@@ -9,7 +9,7 @@ const Story = new Schema(
     title: { type: String, required: true },
     author: { type: String, required: true },
     userID: { type: String, required: true }, //key to user in users table?
-    story: { type: String, required: true },
+    story: { type: String, required: true, unique: true },
     imageURL: { type: String, required: true },
   },
   { timestamps: true }
