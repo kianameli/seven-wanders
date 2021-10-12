@@ -1,10 +1,10 @@
 import './StoryEdit.css'
 import { updateStory, getStory } from '../../services/stories'
 import { useEffect, useState } from 'react'
-import { Layout } from '../../components/Layout/Layout'
+import Layout from '../../components/Layout/Layout'
 import { useParams, Redirect } from 'react-router-dom'
 
-export default function StoryEdit() {
+export default function StoryEdit(props) {
   const [story, setStory] = useState({
     location: '',
     country: '',
@@ -46,7 +46,7 @@ export default function StoryEdit() {
   }
 
   return (
-    //<Layout user={props.user}>
+    <Layout user={props.user}>
     <div className='create-form-container'>
       <form className='create-form' onSubmit={handleSubmit}>
         <input
