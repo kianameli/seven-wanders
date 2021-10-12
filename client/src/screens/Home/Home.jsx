@@ -3,16 +3,19 @@ import Layout from "../../components/Layout/Layout";
 import { useEffect, useState } from "react";
 import ContinentBar from "../../components/ContinentBar/ContinentBar";
 import FeaturedStories from "../../components/FeaturedStories/FeaturedStories";
+import SectionDivider from "../../components/SectionDivider/SectionDivider";
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function Home(props) {
   return (
     // <Layout>
     <>
       <div className="home-page-title">
+        
         <img
-          className="home-page-banner"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Orwell-Bridge.jpg/2560px-Orwell-Bridge.jpg"
-          alt="banner"
+        className="home-page-banner"
+        src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg"
+        alt="banner"
         ></img>
         <div className="home-title-words">
           <h3 className="home-title-title">Lets Wander</h3>
@@ -22,30 +25,30 @@ export default function Home(props) {
             about your own adventures!
           </p>
         </div>
-      </div>
+        </div>
       {/* explore section */}
       <div className="explore-section">
-        <div className="explore-section-title">
-          <p className="title-bar">Explore</p>
-        </div>
+        
+          <SectionDivider text='Explore'/>
+    
         <ContinentBar />
       </div>
 
       {/* featured stories */}
       <div className="featured-stories">
-        <div className="featured-stories-title">
-          <p className="title-bar">Featured Stories</p>
-        </div>
+        
+        <SectionDivider text='Featured Stories'/>
+        
         <FeaturedStories />
       </div>
 
       {/* tell your story */}
       <div className="tell-your-story">
-        <div className="tell-your-story-title">
-          <p className="title-bar">Tell your Story</p>
-        </div>
+        <SectionDivider text= 'Tell Your Story'/>
       </div>
-      <div></div>
+      <div>
+    <SignUpForm/>
+      </div>
     </>
     // </Layout>
   );

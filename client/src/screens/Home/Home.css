@@ -1,0 +1,28 @@
+.title-bar {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 10px 0 20px; 
+} 
+
+.title-bar span { 
+  background:#fff; 
+  padding:0 10px; 
+}
+
+.home-page-banner {
+  position: relative;
+  z-index: -1;
+}
+.home-title-words {
+  position: absolute;
+   top: 1500px;
+   left: 0;
+   width: 100%;
+   margin: 0 auto;
+   width: 800px;
+   height: 50px;
+   color:white;
+   text-align: left;
+}
