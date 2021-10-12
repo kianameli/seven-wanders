@@ -1,9 +1,12 @@
 import './Explore.css'
+import Layout from '../../components/Layout/Layout'
 
 export default function Explore() {
   return (
-    <div>
-      Explore
-    </div>
+    <Layout>
+      <div>
+        Explore
+      </div>
+    </Layout>
   )
 }
