@@ -8,8 +8,8 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function Home(props) {
   return (
-    // <Layout>
-    <>
+    <Layout>
+   
       <div className="home-page-title">
         
         <img
@@ -45,11 +45,9 @@ export default function Home(props) {
       {/* tell your story */}
       <div className="tell-your-story">
         <SectionDivider text= 'Tell Your Story'/>
-      </div>
-      <div>
+      
     <SignUpForm/>
       </div>
-    </>
-    // </Layout>
+    </Layout>
   );
 }
