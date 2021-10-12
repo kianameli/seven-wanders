@@ -1,0 +1,47 @@
+nav {
+  flex: 1;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  padding: 20px 0;
+  margin-left: -2px;
+  margin-right: -2px;
+  margin-top: -2px;
+  box-shadow: 1px 1px 1px 0.3px #cecece;
+  width: 100%;
+}
+
+.logo {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Sulphur Point", sans-serif;
+  text-align: center;
+  font-weight: 800;
+  font-size: 38px;
+  letter-spacing: -1px;
+  flex: 1;
+  max-width: 30vw;
+  transition: 250ms all;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  width: 60%;
+  align-items: center;
+}
+
+.link {
+  flex: 1;
+}
+
+.welcome {
+  padding: 0 100px;
+}
