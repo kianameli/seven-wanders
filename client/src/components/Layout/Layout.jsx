@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 export default function Layout() {
   return (
     <div className='layout'>
-      <Navbar user={true} />
+      <Navbar user={null} />
       <div className="layout-children">
         {null}
       </div>
