@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './SignIn.css'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
@@ -15,9 +15,10 @@ const SignIn = (props) => {
   })
 
   const handleChange = (event) => {
+    const { name, value } = event.target
     setForm({
       ...form,
-      [event.target.name]: event.target.value,
+      [name]: value,
     })
   }
 
@@ -25,6 +26,7 @@ const SignIn = (props) => {
     event.preventDefault()
     const { setUser } = props
     try {
+      console.log("onSignIn Form: " ,form);
       const user = await signIn(form)
       setUser(user)
       history.push('/')

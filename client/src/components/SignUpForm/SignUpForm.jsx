@@ -58,9 +58,11 @@ const SignUpForm = (props) => {
   const { username, email, password, passwordConfirmation } = form
 
   return (
-    <><div className='sign-up-background'>
+    <>
+      <div className='sign-up-background'>
       <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='sign-up-background' />
-    </div><div className='form-container'>
+      </div>
+      <div className='form-container'>
         <h1 className='sign-up-title'>Create Account</h1>
         <h3 className='sign-up-message'>Become a member to tell your story</h3>
         <form onSubmit={onSignUp}>
@@ -98,7 +100,8 @@ const SignUpForm = (props) => {
             onChange={handleChange} />
           {renderError()}
         </form>
-      </div></>
+      </div>
+    </>
   )
 }
 

@@ -1,10 +1,10 @@
 import './StoryCreate.css'
 import { createStory } from '../../services/stories'
 import { useState } from 'react'
-// import { Layout } from '../../components/Layout'
+import Layout from '../../components/Layout/Layout'
 import { Redirect } from 'react-router-dom'
 
-export default function StoryCreate() {
+export default function StoryCreate(props) {
   const [story, setStory] = useState({
     location: '',
     country: '',
@@ -37,7 +37,7 @@ export default function StoryCreate() {
   }
 
   return (
-    // <Layout user={props.user}>
+    <Layout user={props.user}>
     <div className='create-form-container'>
       <form className='create-form' onSubmit={handleSubmit}>
         <input
@@ -51,9 +51,9 @@ export default function StoryCreate() {
         />
         <input
           className='input-imageUrl'
-          placeholder='e.g., www.abc.com'
+          placeholder='post your image Url here'
           value={story.imageURL}
-          name='Image-Link'
+          name='imageURL'
           required
           onChange={handleChange}
         />
@@ -61,7 +61,7 @@ export default function StoryCreate() {
           className='input-location'
           placeholder='e.g., Maafushi Island'
           value={story.location}
-          name='Location'
+          name='location'
           required
           onChange={handleChange}
         />
@@ -94,6 +94,6 @@ export default function StoryCreate() {
         </button>
       </form>
     </div>
-    //  </Layout>
+   </Layout>
   )
 }

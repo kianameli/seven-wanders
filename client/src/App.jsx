@@ -14,6 +14,7 @@ import { verifyUser } from './services/users';
 function App() {
 
   const [user, setUser] = useState(null)
+  console.log("user: " ,user);
 
   useEffect(() => {
     const fetchUser = async () => {
