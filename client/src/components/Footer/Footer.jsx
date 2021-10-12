@@ -42,6 +42,16 @@ const Nav = ({ user }) => {
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
 
+        <div className="continent-links">
+          <h2>Team Contact</h2>
+          <NavLink to="/">North America</NavLink>
+          <NavLink to="/">South America</NavLink>
+          <NavLink to="/">Austrailia</NavLink>
+          <NavLink to="/">Asia</NavLink>
+          <NavLink to="/">Europe</NavLink>
+          <NavLink to="/">Africa</NavLink>
+        </div>
+
       </div>
     </footer>
   )
