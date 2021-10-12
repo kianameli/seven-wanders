@@ -20,7 +20,7 @@ export default function StoryDetail(props) {
   
 
   return (
-    <Layout >
+    <Layout user={props.user}>
 
       <div>
         <br/><br/><br/>

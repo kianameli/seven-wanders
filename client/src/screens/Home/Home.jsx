@@ -8,7 +8,7 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function Home(props) {
   return (
-    <Layout>
+    <Layout user={props.user}>
    
       <div className="home-page-title">
         
