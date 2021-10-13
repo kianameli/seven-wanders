@@ -29,7 +29,8 @@ nav {
   display: flex;
   flex-direction: row;
   font-family: "Open Sans";
-  justify-self: center;
+  color: black;
+  justify-items: center;
 }
 
 .header-links {
@@ -39,5 +40,7 @@ nav {
   margin-bottom: 10px;
   margin-right: 50px;
   font-family: "Open Sans";
+  color: black;
+  text-decoration: none;
 }
 
