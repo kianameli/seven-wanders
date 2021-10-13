@@ -15,7 +15,7 @@ const unauthenticatedOptions = (
 )
 const alwaysOptions = (
   <>
-    <NavLink className="link" to="/explore">Explore</NavLink>
+    <NavLink className="header-links" to="/explore">Explore</NavLink>
   </>
 )
 const Nav = ({ user }) => {
