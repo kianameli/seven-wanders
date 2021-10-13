@@ -1,0 +1,23 @@
+.sign-in-background {
+
+}
+
+.sign-in-header {
+  font-family: "Sulphur Point", sans-serif;
+}
+
+.form-container {
+background-color: #324A51;
+opacity: .5;
+color: white;
+padding: 20px;
+margin: 50px;
+}
+
+.sign-in-input {
+  background-color: #324A51;
+  opacity: 1;
+  border: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
