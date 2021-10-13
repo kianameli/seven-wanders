@@ -26,7 +26,7 @@ const SignIn = (props) => {
     event.preventDefault()
     const { setUser } = props
     try {
-      console.log("onSignIn Form: " ,form);
+      console.log("onSignIn Form: ", form);
       const user = await signIn(form)
       setUser(user)
       history.push('/')
@@ -58,26 +58,26 @@ const SignIn = (props) => {
 
   return (
     <Layout>
-    <div className='sign-in-background'>
-      <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='sign-in-back' />
-    </div><div className='form-container'>
-        <h1>Dive back in</h1>
+      <div className='sign-in-background'>
+        <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='sign-in-back' />
+      </div><div className='form-container'>
+        <h1 className='sign-in-header'>Dive back in</h1>
         <form onSubmit={onSignIn}>
 
-          <input
+          <input className='sign-in-input'
             required
             type='text'
             name='username'
             value={username}
-            placeholder='Username'
+            placeholder='| Username'
             onChange={handleChange} />
 
-          <input
+          <input className='sign-in-input'
             required
             name='password'
             value={password}
             type='password'
-            placeholder='Password'
+            placeholder='| Password'
             onChange={handleChange} />
           {renderError()}
         </form>
