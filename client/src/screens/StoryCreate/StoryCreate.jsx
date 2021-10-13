@@ -33,7 +33,7 @@ export default function StoryCreate(props) {
   }
 
   if (isCreated) {
-    return <Redirect to={`/exlore`} />
+    return <Redirect to={`/explore`} />
   }
 
   return (

@@ -13,6 +13,7 @@ export default function Explore(props) {
   const [stories, setStories] = useState([]);
   const [searchResults, setSearchResults] = useState(['initial state'])
   // const [searchByField,setSearchByField]=useState('title')
+  console.log("before effect: " ,searchResults);
 
   useEffect(() => {
     const fetchStories = async () => {
@@ -20,12 +21,16 @@ export default function Explore(props) {
       setStories(allStories)
       setSearchResults(allStories)
     }
-    const filterStories = () => {
-      const filteredStories = stories.filter(story => story.continent === continentFilter)
-      setSearchResults(filteredStories)
-    }
+    // const filterStories = () => {
+    //   const filteredStories = stories.filter(story => {
+    //     if (story.continent === continentFilter) 
+    //     console.log("story cont: ", story.continent, "cont filter: ", continentFilter);
+    //     return story.continent === continentFilter
+    //   })
+    //   setSearchResults(filteredStories)
+    // }
     fetchStories()
-    filterStories()
+    //filterStories()
   }, [])
 
   // function handleSearchBy(field) {
@@ -49,12 +54,20 @@ export default function Explore(props) {
   //   }
   //   console.log(stories[0].title,searchValue,searchResults)
   // }
+  function handleContinentClick(e) {
+    console.log('handleContinentClick called!')
+    const results = stories.filter(story => {
+      return (story.continent === e)
+    })
+    setContinentFilter(e)
+    setSearchResults(results)
+  }
 
   function handleSearch(event) {
     console.log('handleSearch called!')
     const searchValue = event.target.value.toLowerCase()
     const results = stories.filter(story => {
-      return story.title.toLowerCase().includes(searchValue)
+      return (story.title.toLowerCase().includes(searchValue))
     })
     setSearchResults(results)
   }
@@ -74,7 +87,7 @@ export default function Explore(props) {
       {/* <SearchBy handleSearchBy={handleSearchBy} handleSubmit={handleSubmit}/> */}
       <SectionDivider text='Continents' />
       <p>{continentFilter}</p>
-      <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} linksOn={false} />
+      <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={false} />
 
       <SectionDivider text='Stories' />
       <div className='stories-section'>
