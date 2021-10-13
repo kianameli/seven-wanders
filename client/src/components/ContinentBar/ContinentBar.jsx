@@ -24,7 +24,7 @@ export default function ContinentBar(props) {
               name={continent.name}
               key={index}
             >
-              <img src={continent.image} alt={continent.name} />
+              <img className='continent-img' src={continent.image} alt={continent.name} />
               <p>{`${continent.name}`}</p>
             </div>
           )
