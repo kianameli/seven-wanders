@@ -7,8 +7,10 @@ import SectionDivider from "../../components/SectionDivider/SectionDivider";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function Home(props) {
+  const {user,setUser}=props
+  
   return (
-    <Layout user={props.user}>
+    <Layout user={user}>
    
       <div className="home-page-title">
         
@@ -25,12 +27,11 @@ export default function Home(props) {
             about your own adventures!
           </p>
         </div>
-        </div>
+      </div>
       {/* explore section */}
       <div className="explore-section">
         
           <SectionDivider text='Explore'/>
-    
         <ContinentBar />
       </div>
 
@@ -46,7 +47,7 @@ export default function Home(props) {
       <div className="tell-your-story">
         <SectionDivider text= 'Tell Your Story'/>
       
-    <SignUpForm/>
+        <SignUpForm user={user} setUser={setUser}/>
       </div>
     </Layout>
   );
