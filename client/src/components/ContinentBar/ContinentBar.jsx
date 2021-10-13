@@ -6,28 +6,30 @@ import NorthAmerica from './continent-images/NorthAmerica.png'
 import Antarctica from './continent-images/Antarctica.png'
 import Europe from './continent-images/Europe.png'
 import Australia from './continent-images/Australia.png'
+import { Link } from 'react-router-dom'
 
 
-export default function ContinentBar() {
-  const continents=[Asia,SouthAmerica,Antarctica,Africa,Australia,NorthAmerica,Europe]
-  
-console.log(continents[1].split(' ').join(''))
-  function handleClick(e) {
-    e.preventDefault()
-    console.log(e.target.name)
-  }
+export default function ContinentBar(props) {
+  const continents = [{ name: 'Asia', image: Asia }, { name: 'South America', image: SouthAmerica }, { name: 'Antarctica', image: Antarctica }, { name: 'Africa', image: Africa }, { name: 'Australia', image: Australia }, { name: 'North America', image: NorthAmerica }, { name: 'Europe', image: Europe }]
+
+  const linkOptions = (
+    <>
+      <Link to='/explore' />
+    </>
+  )
 
   return (
     <div className='continent-bar'>
-      {continents.map((continent,index) => {
-        return <div className='continent-button'
-          //onClick={(e) => handleClick(e)}
-          // name={continent}
+      {continents.map((continent, index) => {
+        return <Link to='/explore' className='continent-button'
+          onClick={(e) => props.setContinentFilter(e.target.name)
+          }
+          name={continent.name}
           key={index}
         >
-          <img src={Africa} alt={continent} />
-          {/* <p>{continent}</p> */}
-        </div>
+          <img src={continent.image} alt={continent.name} />
+          <p>{`${continent.name}`}</p>
+        </Link>
       })}
     </div>
   )

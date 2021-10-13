@@ -1,0 +1,10 @@
+.continent-bar{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.continent-button {
+width: auto;
+max-width: 100px;
+flex-direction: row;
+}

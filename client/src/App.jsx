@@ -14,7 +14,7 @@ import { verifyUser } from './services/users';
 function App() {
 
   const [user, setUser] = useState(null)
-  console.log("user: " ,user);
+  const [continentFilter, setContinentFilter] = useState('')
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -24,19 +24,17 @@ function App() {
     fetchUser()
   }, [])
 
-
-
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Home user={user} setUser={setUser}/>
+          <Home user={user} setUser={setUser} continentFilter={continentFilter} setContinentFilter={setContinentFilter} />
         </Route>
         <Route exact path="/explore">
-          <Explore user={user}/>
+          <Explore user={user} continentFilter={continentFilter} setContinentFilter={setContinentFilter} />
         </Route>
         <Route exact path="/stories/:id">
-          <StoryDetail user={user}/>
+          <StoryDetail user={user} />
         </Route>
         <Route exact path="/story-create">
           {user ? <StoryCreate user={user} /> : <Redirect to="/sign-up" />}
@@ -45,13 +43,13 @@ function App() {
           {user ? <StoryEdit user={user} /> : <Redirect to="/sign-in" />}
         </Route>
         <Route exact path="/sign-up">
-          <SignUp setUser={setUser}/>
+          <SignUp setUser={setUser} />
         </Route>
         <Route exact path="/sign-in">
-          <SignIn setUser={setUser}/>
+          <SignIn setUser={setUser} />
         </Route>
         <Route exact path="/sign-out">
-          <SignOut setUser={setUser}/>
+          <SignOut setUser={setUser} />
         </Route>
       </Switch>
     </div>
