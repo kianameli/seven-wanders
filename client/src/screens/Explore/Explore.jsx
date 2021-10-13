@@ -13,24 +13,21 @@ export default function Explore(props) {
   const [stories, setStories] = useState([]);
   const [searchResults, setSearchResults] = useState(['initial state'])
   // const [searchByField,setSearchByField]=useState('title')
-  console.log("before effect: " ,searchResults);
 
   useEffect(() => {
     const fetchStories = async () => {
       const allStories = await getStories()
       setStories(allStories)
-      setSearchResults(allStories)
+      if (continentFilter !== '') {
+        const filteredStories = allStories.filter(story => {
+            return story.continent === continentFilter
+        })
+        setSearchResults(filteredStories)
+      } else {
+        setSearchResults(allStories)
+      }
     }
-    // const filterStories = () => {
-    //   const filteredStories = stories.filter(story => {
-    //     if (story.continent === continentFilter) 
-    //     console.log("story cont: ", story.continent, "cont filter: ", continentFilter);
-    //     return story.continent === continentFilter
-    //   })
-    //   setSearchResults(filteredStories)
-    // }
     fetchStories()
-    //filterStories()
   }, [])
 
   // function handleSearchBy(field) {
@@ -54,12 +51,12 @@ export default function Explore(props) {
   //   }
   //   console.log(stories[0].title,searchValue,searchResults)
   // }
-  function handleContinentClick(e) {
+  function handleContinentClick(continent) {
     console.log('handleContinentClick called!')
     const results = stories.filter(story => {
-      return (story.continent === e)
+      return (story.continent === continent)
     })
-    setContinentFilter(e)
+    setContinentFilter(continent)
     setSearchResults(results)
   }
 
