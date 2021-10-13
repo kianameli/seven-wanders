@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Home user={user}/>
+          <Home user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/explore">
           <Explore user={user}/>
