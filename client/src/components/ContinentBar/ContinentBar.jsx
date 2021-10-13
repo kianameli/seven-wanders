@@ -12,24 +12,26 @@ import { Link } from 'react-router-dom'
 export default function ContinentBar(props) {
   const continents = [{ name: 'Asia', image: Asia }, { name: 'South America', image: SouthAmerica }, { name: 'Antarctica', image: Antarctica }, { name: 'Africa', image: Africa }, { name: 'Australia', image: Australia }, { name: 'North America', image: NorthAmerica }, { name: 'Europe', image: Europe }]
 
-  const linkOptions = (
-    <>
-      <Link to='/explore' />
-    </>
-  )
-
   return (
     <div className='continent-bar'>
       {continents.map((continent, index) => {
-        return <Link to='/explore' className='continent-button'
-          onClick={(e) => props.setContinentFilter(e.target.name)
-          }
-          name={continent.name}
-          key={index}
-        >
-          <img src={continent.image} alt={continent.name} />
-          <p>{`${continent.name}`}</p>
-        </Link>
+        const content = (
+            <div className='continent-button'    
+            onClick={(e) => {
+              props.setContinentFilter(e.target.name)
+              console.log(e.target.name)
+            }}
+              name={continent.name}
+              key={index}
+            >
+              <img src={continent.image} alt={continent.name} />
+              <p>{`${continent.name}`}</p>
+            </div>
+          )
+        return (props.linksOn ?
+          <Link to='/explore'>{content}</Link>
+          : <div>{content}</div>
+        )
       })}
     </div>
   )
