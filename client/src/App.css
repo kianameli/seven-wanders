@@ -1,1 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Sulphur+Point:wght@300&display=swap");
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  
+  background: transparent;  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}

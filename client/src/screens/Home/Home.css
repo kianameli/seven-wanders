@@ -1,19 +1,13 @@
-.title-bar {
-  width: 100%; 
-  text-align: center; 
-  border-bottom: 1px solid #000; 
-  line-height: 0.1em;
-  margin: 10px 0 20px; 
-} 
+.home-page-title {
 
-.title-bar span { 
-  background:#fff; 
-  padding:0 10px; 
 }
 
 .home-page-banner {
   position: relative;
   z-index: -1;
+  height: 50%;
+  width: 100%;
+
 }
 .home-title-words {
   position: absolute;
@@ -26,3 +20,13 @@
    color:white;
    text-align: left;
 }
+.home-title-title{
+
+}
+img{
+  position: relative;
+  z-index: -1;
+  height: 50%;
+  width: 100%;
+}
+
