@@ -11,6 +11,7 @@ import { getStories } from '../../services/stories.js'
 export default function Explore(props) {
   
   const [stories, setStories] = useState([]);
+  const [searchResults, setSearchResults] = useState({})
   const [searchByField,setSearchByField]=useState('title')
 
   //when Search updates via setStories, this:
@@ -33,7 +34,7 @@ export default function Explore(props) {
     const results = stories.filter(story => {
       story[searchByField].includes(searchValue)
     })
-    setStories(results)
+    setSearchResults(results)
   }
 
   function handleSubmit(event) {
@@ -53,7 +54,7 @@ export default function Explore(props) {
 
       <SectionDivider text='Stories' />
       <div className='stories-section'>
-        {stories.map((story,index) => <StoryCard key={index} story={story} />  )}
+        {searchResults.map((story,index) => <StoryCard key={index} story={story} />  )}
       </div>
     </Layout>
   )
