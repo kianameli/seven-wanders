@@ -1,8 +1,104 @@
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 1;
-  padding: 20px;
+  width: 100%;
   background-color: #324A51;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 175px;
+  color: white;
+  z-index: 0;
+  width: 100%;
+}
+
+.footer-block-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.footer-logo {
+  color: white;
+  text-decoration: none;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.github-logo{
+  z-index: 1;
+  margin-top: 10px;
+  max-width: 18vw;
+}
+
+.footer-block-two {
+  display: flex;
+  flex-direction: column;
+  /* justify-self: flex-start; 
+
+  get all .footer-titles (ie team contact, menu, and continents) to start at same vertical location 
+  */
+  align-items: center;
+}
+
+.footer-github-links {
+  display: flex;
+  flex-direction: column;
+  font-family: Open Sans;
+  /* justify-content: space-between;
+  align-content: space-between;
+  text-align: center; 
+
+  get github links to align center with more space between each line
+
+  */
+}
+
+.footer-block-three {
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+  /* justify-items: space-between;
+  
+push menu and continents away from each other so that they take up even amounts of last third of footer
+
+  */
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;  
+  color: white;
+  text-decoration: none;
+  font-family: Open Sans;
+}
+
+.continent-links {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  /* flex-direction: column-wrap; 
+  
+  make continents list two columns
+  
+  */
+}
+
+.footer-titles {
+  font-family: "Sulphur Point", sans-serif;
+}
+
+.f-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  /* text-align: center; get links to align center in their respective div */
 }
