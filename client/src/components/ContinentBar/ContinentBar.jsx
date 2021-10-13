@@ -18,8 +18,8 @@ export default function ContinentBar(props) {
         const content = (
             <div className='continent-button'    
             onClick={(e) => {
-              props.setContinentFilter(e.target.name)
-              console.log(e.target.name)
+              props.setContinentFilter(continent.name)
+              console.log(continent.name)
             }}
               name={continent.name}
               key={index}

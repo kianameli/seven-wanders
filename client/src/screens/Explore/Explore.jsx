@@ -20,7 +20,12 @@ export default function Explore(props) {
       setStories(allStories)
       setSearchResults(allStories)
     }
+    const filterStories = () => {
+      const filteredStories = stories.filter(story => story.continent === continentFilter)
+      setSearchResults(filteredStories)
+    }
     fetchStories()
+    filterStories()
   }, [])
 
   // function handleSearchBy(field) {
