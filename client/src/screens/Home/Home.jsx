@@ -7,17 +7,17 @@ import SectionDivider from "../../components/SectionDivider/SectionDivider";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function Home(props) {
-  const {user,setUser}=props
-  
+  const { user, setUser, continentFilter, setContinentFilter } = props
+
   return (
     <Layout user={user}>
-   
+
       <div className="home-page-title">
-        
+
         <img
-        className="home-page-banner"
-        src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg"
-        alt="banner"
+          className="home-page-banner"
+          src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg"
+          alt="banner"
         ></img>
         <div className="home-title-words">
           <h3 className="home-title-title">Lets Wander</h3>
@@ -30,24 +30,24 @@ export default function Home(props) {
       </div>
       {/* explore section */}
       <div className="explore-section">
-        
-          <SectionDivider text='Explore'/>
-        <ContinentBar />
+
+        <SectionDivider text='Explore' />
+        <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} linksOn={true} />
       </div>
 
       {/* featured stories */}
       <div className="featured-stories">
-        
-        <SectionDivider text='Featured Stories'/>
-        
+
+        <SectionDivider text='Featured Stories' />
+
         <FeaturedStories />
       </div>
 
       {/* tell your story */}
       <div className="tell-your-story">
-        <SectionDivider text= 'Tell Your Story'/>
-      
-        <SignUpForm user={user} setUser={setUser}/>
+        <SectionDivider text='Tell Your Story' />
+
+        <SignUpForm user={user} setUser={setUser} />
       </div>
     </Layout>
   );

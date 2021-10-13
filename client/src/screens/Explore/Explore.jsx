@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './Explore.css'
 import Layout from '../../components/Layout/Layout'
 import SectionDivider from '../../components/SectionDivider/SectionDivider'
@@ -9,7 +9,7 @@ import StoryCard from '../../components/StoryCard/StoryCard'
 import { getStories } from '../../services/stories.js'
 
 export default function Explore(props) {
-  
+  const { continentFilter, setContinentFilter } = props;
   const [stories, setStories] = useState([]);
   const [searchResults, setSearchResults] = useState(['initial state'])
   // const [searchByField,setSearchByField]=useState('title')
@@ -21,7 +21,7 @@ export default function Explore(props) {
       setSearchResults(allStories)
     }
     fetchStories()
-  },[])
+  }, [])
 
   // function handleSearchBy(field) {
   //   if (field != '' && field != undefined) {
@@ -58,20 +58,22 @@ export default function Explore(props) {
     event.preventDefault()
   }
 
+  console.log(continentFilter)
   return (
-    <Layout user={ props.user }>
-  
+    <Layout user={props.user}>
+
       <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='explore-back' />
       <h1 className='explore-title'>Explore</h1>
-      
+
       <Search handleSearch={handleSearch} handleSubmit={handleSubmit} />
       {/* <SearchBy handleSearchBy={handleSearchBy} handleSubmit={handleSubmit}/> */}
       <SectionDivider text='Continents' />
-      {/* <ContinentBar /> */}
+      <p>{continentFilter}</p>
+      <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} linksOn={false} />
 
       <SectionDivider text='Stories' />
       <div className='stories-section'>
-        {searchResults.map((story,index) => <StoryCard key={index} story={story} />  )}
+        {searchResults.map((story, index) => <StoryCard key={index} story={story} />)}
       </div>
     </Layout>
   )
