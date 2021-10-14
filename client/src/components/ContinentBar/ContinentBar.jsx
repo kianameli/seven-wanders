@@ -8,9 +8,14 @@ import Europe from './continent-images/Europe.png'
 import Australia from './continent-images/Australia.png'
 import { Link } from 'react-router-dom'
 
-
 export default function ContinentBar(props) {
-  const continents = [{ name: 'Asia', image: Asia }, { name: 'South America', image: SouthAmerica }, { name: 'Antarctica', image: Antarctica }, { name: 'Africa', image: Africa }, { name: 'Australia', image: Australia }, { name: 'North America', image: NorthAmerica }, { name: 'Europe', image: Europe }]
+  const continents = [{ name: 'Asia', image: Asia },
+    { name: 'South America', image: SouthAmerica },
+    { name: 'Antarctica', image: Antarctica },
+    { name: 'Africa', image: Africa },
+    { name: 'Australia', image: Australia },
+    { name: 'North America', image: NorthAmerica },
+    { name: 'Europe', image: Europe }]
 
   return (
     <div className='continent-bar'>
@@ -19,7 +24,7 @@ export default function ContinentBar(props) {
             <div className='continent-button'    
             onClick={(e) => {
               e.preventDefault();
-              props.handleContinentClick(continent.name)
+              props.handleContinentClick(continent.name);
             }}
               name={continent.name}
               key={index}
