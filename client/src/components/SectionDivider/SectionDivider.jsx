@@ -4,7 +4,7 @@ export default function SectionDivider(props) {
 
   return (
     
-    <p className="section-divider"><span>{props.text}</span></p>
+    <p className={props.size || "section-divider"}><span>{props.text}</span></p>
     
     
   )
