@@ -59,7 +59,7 @@ export default function StoryCreate(props) {
             onChange={handleChange}
           />
 
-          <SectionDivider text='Image URL' />
+          <SectionDivider text='Image Link' />
           <input
             className='create-form-input'
             placeholder='| Post your image link here'
