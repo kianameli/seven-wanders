@@ -7,10 +7,9 @@ footer {
 .footer-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
-  height: 175px;
+  height: 200px;
   color: white;
   z-index: 0;
   width: 100%;
@@ -21,6 +20,9 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-left: 30px;
+  padding: 25px 0px;
+  border-right: 2px solid black;
+  width: 33vw;
 }
 
 .footer-logo {
@@ -47,12 +49,15 @@ footer {
   get all .footer-titles (ie team contact, menu, and continents) to start at same vertical location 
   */
   align-items: center;
+  border-right: 2px solid black;
+  width: 33vw;
 }
 
 .footer-github-links {
   display: flex;
   flex-direction: column;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
   /* justify-content: space-between;
   align-content: space-between;
   text-align: center; 
@@ -65,11 +70,11 @@ footer {
 .footer-block-three {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   margin-right: 30px;
-  /* justify-items: space-between;
-  
+  width: 33vw;
+  /* 
 push menu and continents away from each other so that they take up even amounts of last third of footer
-
   */
 }
 
@@ -78,27 +83,55 @@ push menu and continents away from each other so that they take up even amounts 
   flex-direction: column;  
   color: white;
   text-decoration: none;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
 }
 
 .continent-links {
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans";
-  /* flex-direction: column-wrap; 
-  
+  flex-wrap: wrap;
+  font-family: "Open Sans", sans-serif;
+  width: 15vw;
+  /* 
   make continents list two columns
-  
   */
 }
 
 .footer-titles {
   font-family: "Sulphur Point", sans-serif;
+  vertical-align: baseline;
+  text-align: center;
 }
 
 .f-link {
   color: white;
   text-decoration: none;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 2;
+  /* flex: 1 1 50%; */
+  /* text-align: center; get links to align center in their respective div */
+}
+
+.c-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 2;
+  /* flex: 1 1 50%; */
+  /* text-align: center; get links to align center in their respective div */
+}
+
+.m-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 2;
+  /* flex: 1 1 50%; */
   /* text-align: center; get links to align center in their respective div */
 }
