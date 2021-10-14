@@ -1,11 +1,18 @@
+
 import { useState } from 'react'
 import './StoryCreate.css'
 import Layout from '../../components/Layout/Layout'
+
 import { createStory } from '../../services/stories'
 import { Redirect } from 'react-router-dom'
+
+import './StoryCreate.css'
+import Layout from '../../components/Layout/Layout'
 import SectionDivider from '../../components/SectionDivider/SectionDivider'
+
+
 export default function StoryCreate(props) {
-  
+
   const [story, setStory] = useState({
     location: '',
     country: '',
@@ -39,9 +46,12 @@ export default function StoryCreate(props) {
 
   return (
     <Layout user={props.user}>
-    <div className='create-form-container'>
-      <form className='create-form' onSubmit={handleSubmit}>
-          
+      <div className='create-banner-container'>
+        <h4 className='banner-text'>Tell your story</h4>
+      </div>
+      <div className='create-form-container'>
+        <form className='create-form' onSubmit={handleSubmit}>
+
           <SectionDivider text='Title'/>
           <input
             className='input-title'
@@ -54,53 +64,54 @@ export default function StoryCreate(props) {
             />
           
           <SectionDivider text='Image URL' />
+
           <input
-          className='input-imageUrl'
-          placeholder='post your image Url here'
-          value={story.imageURL}
-          name='imageURL'
-          required
-          onChange={handleChange}
+            className='input-imageUrl'
+            placeholder='post your image Url here'
+            value={story.imageURL}
+            name='imageURL'
+            required
+            onChange={handleChange}
           />
 
           <SectionDivider text='Location' />
           <input
-          className='input-location'
-          placeholder='e.g., Maafushi Island'
-          value={story.location}
-          name='location'
-          required
-          onChange={handleChange}
+            className='input-location'
+            placeholder='e.g., Maafushi Island'
+            value={story.location}
+            name='location'
+            required
+            onChange={handleChange}
           />
 
           <SectionDivider text='Country' />
           <input
-          className='input-country'
-          placeholder='e.g., The Maldives'
-          value={story.country}
-          name='country'
-          required
-          onChange={handleChange}
+            className='input-country'
+            placeholder='e.g., The Maldives'
+            value={story.country}
+            name='country'
+            required
+            onChange={handleChange}
           />
 
           <SectionDivider text='Continent' />
           <input
-          className='input-continent'
-          placeholder='e.g., Asia'
-          value={story.continent}
-          name='continent'
-          required
-          onChange={handleChange}
+            className='input-continent'
+            placeholder='e.g., Asia'
+            value={story.continent}
+            name='continent'
+            required
+            onChange={handleChange}
           />
 
           <SectionDivider text='Story' />
           <input
-          className='input-story'
-          placeholder='Write your story here...'
-          value={story.story}
-          name='story'
-          required
-          onChange={handleChange}
+            className='input-story'
+            placeholder='Write your story here...'
+            value={story.story}
+            name='story'
+            required
+            onChange={handleChange}
           />
           <button type='submit' className='create-submit-button'>
           Create
@@ -108,5 +119,6 @@ export default function StoryCreate(props) {
       </form>
     </div>
    </Layout>
+
   )
 }
