@@ -7,7 +7,6 @@ import { createStory } from '../../services/stories'
 import { Redirect } from 'react-router-dom'
 
 import './StoryCreate.css'
-import Layout from '../../components/Layout/Layout'
 import SectionDivider from '../../components/SectionDivider/SectionDivider'
 
 
