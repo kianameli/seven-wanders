@@ -33,7 +33,7 @@ export default function StoryDetail(props) {
         <img src={imageURL} alt={location} />
         <section>{story}</section>
         <Link to={`/stories/${id}/edit`}><button>Edit Story</button></Link>
-        {/* <Link to={`/stories/${id}/edit`}><button onClick={handleDelete}>Delete Story</button></Link> */}
+      
     </div>
     </Layout>
   )
