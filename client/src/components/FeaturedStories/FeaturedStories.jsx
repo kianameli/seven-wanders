@@ -22,9 +22,10 @@ export default function FeaturedStories() {
 
 
   return (
-    <div>
-      featured
+    <div className='featured-stories-box'>
+      
       {featuredStories?.map((story,index) => <StoryCard story={story} key={index}/>)}
     </div>
+   
   )
 }

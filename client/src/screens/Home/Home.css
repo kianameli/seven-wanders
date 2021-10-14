@@ -1,6 +1,4 @@
-.home-page-title {
 
-}
 
 .home-page-banner {
   position: relative;
@@ -20,13 +18,13 @@
    color:white;
    text-align: left;
 }
-.home-title-title{
 
-}
 img{
   position: relative;
   z-index: -1;
   height: 50%;
   width: 100%;
 }
+
+
 

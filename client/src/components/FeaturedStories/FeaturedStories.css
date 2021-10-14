@@ -1,0 +1,10 @@
+.featured-stories-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  columns: 2 auto;
+  
+  
+  
+} 
