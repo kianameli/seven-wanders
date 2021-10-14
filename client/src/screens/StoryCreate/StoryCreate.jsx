@@ -35,7 +35,7 @@ export default function StoryCreate(props) {
     const created = await createStory(story)
     setCreated({ created })
   }
-    
+
   if (isCreated) {
     return <Redirect to={`/explore`} />
   }
@@ -48,22 +48,21 @@ export default function StoryCreate(props) {
       <div className='create-form-container'>
         <form className='create-form' onSubmit={handleSubmit}>
 
-          <SectionDivider text='Title'/>
+          <SectionDivider text='Title' />
           <input
-            className='input-title'
-            placeholder='Give your story a title...'
+            className='create-form-input'
+            placeholder='| Give your story a title...'
             value={story.title}
             name='title'
             required
             autoFocus
             onChange={handleChange}
-            />
-          
-          <SectionDivider text='Image URL' />
+          />
 
+          <SectionDivider text='Image URL' />
           <input
-            className='input-imageUrl'
-            placeholder='post your image Url here'
+            className='create-form-input'
+            placeholder='| Post your image link here'
             value={story.imageURL}
             name='imageURL'
             required
@@ -72,8 +71,8 @@ export default function StoryCreate(props) {
 
           <SectionDivider text='Location' />
           <input
-            className='input-location'
-            placeholder='e.g., Maafushi Island'
+            className='create-form-input'
+            placeholder='| e.g., Maafushi Island'
             value={story.location}
             name='location'
             required
@@ -82,8 +81,8 @@ export default function StoryCreate(props) {
 
           <SectionDivider text='Country' />
           <input
-            className='input-country'
-            placeholder='e.g., The Maldives'
+            className='create-form-input'
+            placeholder='| e.g., The Maldives'
             value={story.country}
             name='country'
             required
@@ -92,8 +91,8 @@ export default function StoryCreate(props) {
 
           <SectionDivider text='Continent' />
           <input
-            className='input-continent'
-            placeholder='e.g., Asia'
+            className='create-form-input'
+            placeholder='| e.g., Asia'
             value={story.continent}
             name='continent'
             required
@@ -101,20 +100,21 @@ export default function StoryCreate(props) {
           />
 
           <SectionDivider text='Story' />
-          <input
-            className='input-story'
-            placeholder='Write your story here...'
+          <textarea
+            className='create-form-input'
+            placeholder='| Write your story here...'
             value={story.story}
             name='story'
             required
             onChange={handleChange}
+            rows={10}
           />
-          <button type='submit' className='create-submit-button'>
-          Create
+          <button type='submit' className='create-submit-button' onChange={handleSubmit}>
+            Create
           </button>
-      </form>
-    </div>
-   </Layout>
+        </form>
+      </div>
+    </Layout>
 
   )
 }
