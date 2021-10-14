@@ -9,6 +9,11 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 export default function Home(props) {
   const { user, setUser, continentFilter, setContinentFilter } = props
 
+  function handleContinentClick(continent) {
+    console.log('handleContinentClick called from home')
+    setContinentFilter(continent) 
+  }
+
   return (
     <Layout user={user}>
 
@@ -32,7 +37,7 @@ export default function Home(props) {
       <div className="explore-section">
 
         <SectionDivider text='Explore' />
-        <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} linksOn={true} />
+        <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={true} />
       </div>
 
       {/* featured stories */}
