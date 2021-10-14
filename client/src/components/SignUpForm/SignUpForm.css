@@ -14,21 +14,33 @@
 .sign-up-header {
   font-family: "Sulphur Point", sans-serif;
   font-size: 38px;
-  margin: 50px;
+  font-weight: 900;
 }
 
 .sign-up-message {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.sign-up-credentials-container {
+  display:flex;
+  flex-direction: row;
+}
+
+.sign-up-credentials {
+  display: flex;
+  flex-direction: column;
 }
 
 .sign-up-input {
-  display: flex;
-  flex-direction: row;
   background-color: #324a51d4;
   border: none;
   color: white;
   font-family: "Open Sans", sans-serif;
-  /* z-index: 3; */
+  margin: 15px;
+  padding: 5px 0 5px 5px;
+  font-size: 18px;
 }
 
 ::placeholder {
@@ -37,12 +49,14 @@
 }
 
 .submit-button {
-  color: black;
-  background: white;
-  border: black 2px;
+  text-align: center;
+  color: white;
+  background: transparent;
+  border: solid white 2px;
+  margin: 15px;
   padding: 10px;
-  font-family: "Open Sans", sans-serif;
-  align-self: center;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
   cursor: pointer;
-  /* z-index: 3; */
 }
