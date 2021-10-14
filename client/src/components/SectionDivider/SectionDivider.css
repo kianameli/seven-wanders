@@ -1,9 +1,12 @@
 .section-divider {
-  width: 100%; 
+  width: 95%; 
   text-align: center; 
   border-bottom: 1px solid #000; 
   line-height: 0.1em;
-  margin: 10px 0 20px; 
+  margin: 20px; 
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
 } 
 
 .section-divider span { 
