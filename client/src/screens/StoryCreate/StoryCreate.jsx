@@ -1,4 +1,8 @@
-import { useState, useEffect } from 'react'
+
+import { useState } from 'react'
+import './StoryCreate.css'
+import Layout from '../../components/Layout/Layout'
+
 import { createStory } from '../../services/stories'
 import { Redirect } from 'react-router-dom'
 import './StoryCreate.css'
@@ -7,7 +11,6 @@ import SectionDivider from '../../components/SectionDivider/SectionDivider'
 
 export default function StoryCreate(props) {
 
-  console.log('story create render')
   const [story, setStory] = useState({
     location: '',
     country: '',
@@ -34,12 +37,10 @@ export default function StoryCreate(props) {
     const created = await createStory(story)
     setCreated({ created })
   }
-
-
+    
   if (isCreated) {
     return <Redirect to={`/explore`} />
   }
-
 
   return (
     <Layout user={props.user}>
