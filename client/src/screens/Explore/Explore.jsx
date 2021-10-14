@@ -73,7 +73,7 @@ export default function Explore(props) {
     event.preventDefault()
   }
 
-  console.log(continentFilter)
+  // console.log(continentFilter)
   return (
     <Layout user={props.user}>
 
