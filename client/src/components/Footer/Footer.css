@@ -1,8 +1,10 @@
 footer {
   flex: 1;
   width: 100%;
-  background-color: #324A51;
-  position: fixed;
+  background-color: #324a51;
+  position: relative;
+  left: 0;
+  bottom: 0;
 }
 
 .footer-container {
@@ -36,7 +38,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.github-logo{
+.github-logo {
   z-index: 1;
   margin-top: 10px;
   max-width: 18vw;
@@ -81,7 +83,7 @@ push menu and continents away from each other so that they take up even amounts 
 
 .menu-links {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   color: white;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
