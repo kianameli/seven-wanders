@@ -5,9 +5,9 @@ import Layout from '../../components/Layout/Layout'
 import SectionDivider from '../../components/SectionDivider/SectionDivider'
 import { useParams, Redirect } from 'react-router-dom'
 
-
 export default function StoryEdit(props) {
-  const [story, setStory] = useState({});
+
+  const [story, setStory] = useState({location: '', country: '', continent: '', title: '', author: '', story: '', imageURL: '', userId: '',});
   const [isUpdated, setIsUpdated] = useState(false)
   let { id } = useParams()
 
@@ -29,8 +29,8 @@ export default function StoryEdit(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const updated = await updateStory(id, story)
-    setIsUpdated(updated)
+    await updateStory(id, story)
+    setIsUpdated(prev=>!prev)
   }
 
   if (isUpdated) {
