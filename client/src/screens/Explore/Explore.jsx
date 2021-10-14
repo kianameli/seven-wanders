@@ -88,7 +88,9 @@ export default function Explore(props) {
 
       <SectionDivider text='Stories' />
       <div className='stories-section'>
+        <div className='mapped-images'>
         {searchResults.map((story, index) => <StoryCard key={index} story={story} />)}
+        </div>
       </div>
     </Layout>
   )
