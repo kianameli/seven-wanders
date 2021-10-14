@@ -1,19 +1,30 @@
 import './FeaturedStories.css'
 import { getStories } from '../../services/stories.js'
 import { useState } from 'react';
+import StoryCard from '../StoryCard/StoryCard';
 
 export default function FeaturedStories() {
   const [featuredStories, setFeaturedStories] = useState([])
   
-  const fetchStories = async () => {
-    const allstories = await getStories();
-    setFeaturedStories(allstories.slice(0, 3))
-  }
-  fetchStories();
+  useEffect(() => {
+    const fetchStories = async () => {
+      const allstories = await getStories();
+      let indices = [0, 1, 2]
+      let featureIndices = [0, 1, 2];
+      indices.forEach(i => {
+        const x = Math.floor(Math.random() * allstories.length)
+        if (!featureIndices.includes(x)) { featureIndices[i] = x }
+      })
+      setFeaturedStories([allstories[featureIndices[0]], allstories[featureIndices[1]], allstories[featureIndices[2]]])
+    }
+    fetchStories();
+  },[])
+  
+  //setFeaturedStories(allstories.slice(0, 3))
 
   // for (emptyArr.length < 3) {
-  //   let x = Math.floor(Math.random() * allStories.length)
-  //   if (!emptyArr.includes(x)) {
+    //   let x = Math.floor(Math.random() * allStories.length)
+    //   if (!emptyArr.includes(x)) {
   //     emptyArr.push(x);
   //   }
   // }
@@ -24,7 +35,8 @@ export default function FeaturedStories() {
       featured
       {featuredStories?.map(story => {
         return (
-          <h1>{story.title}</h1>
+          <StoryCard story={story}/>
+          // <h1>{story.title}</h1>
         )
       })}
     </div>

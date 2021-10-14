@@ -23,11 +23,7 @@ export default function ContinentBar(props) {
         const content = (
             <div className='continent-button'    
             onClick={(e) => {
-<<<<<<< HEAD
-              e.preventDefault();
-=======
              //e.preventDefault();
->>>>>>> 9f663b66208a848497ba6c704eb6826f0bcb1269
               props.handleContinentClick(continent.name);
             }}
               name={continent.name}
