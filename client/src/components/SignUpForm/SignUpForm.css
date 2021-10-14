@@ -24,7 +24,7 @@
 }
 
 .sign-up-credentials-container {
-  display:flex;
+  display: flex;
   flex-direction: row;
 }
 
@@ -45,7 +45,7 @@
 
 ::placeholder {
   color: white;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 form {
@@ -67,4 +67,18 @@ form {
   font-size: 18px;
   cursor: pointer;
   width: 100px;
+}
+
+.danger {
+  justify-self: center;
+  color: white;
+  background: transparent;
+  border: solid white 2px;
+  margin: 15px;
+  padding: 10px;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  width: 125px;
 }
