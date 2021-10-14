@@ -26,6 +26,5 @@ export default function FeaturedStories() {
       
       {featuredStories?.map((story,index) => <StoryCard story={story} key={index}/>)}
     </div>
-   
   )
 }
