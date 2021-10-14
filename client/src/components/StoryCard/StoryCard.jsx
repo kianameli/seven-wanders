@@ -10,13 +10,10 @@ export default function StoryCard(props) {
       className='story-card-container'
     >
       <div className='story-card-image-container'>
-        <img
+        <img className='stories-image'
           src={imageURL}
           alt={title}
-          style={{ width: 170, height: 170, borderRadius: 400 / 2 }}
         />
-      </div>
-      <div className='story-card-info'>
         <p>{title}</p>
         <p>{location}, {country}</p>
       </div>

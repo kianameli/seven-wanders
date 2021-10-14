@@ -1,1 +1,18 @@
+.story-card-container{
+  display: flex;
+  flex-direction: row;
+  
 
+}
+.story-card-image-container{
+  flex-direction: row;
+}
+.stories-image{
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  
+}
+link{
+  
+}
