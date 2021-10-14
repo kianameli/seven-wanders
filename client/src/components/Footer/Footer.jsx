@@ -24,7 +24,7 @@ const Nav = ({ user }) => {
       <div className="footer-container">
         <div className="footer-block-one">
           <NavLink className="footer-logo" to="/">Seven Wanders</NavLink>
-          <NavLink className="github-logo" to="https://github.com/kianameli/seven-wanders"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fgithub%2Fgithub_PNG24.png&f=1&nofb=1" /></NavLink>
+          <NavLink className="github-logo" to="https://github.com/kianameli/seven-wanders"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fgithub%2Fgithub_PNG24.png&f=1&nofb=1" alt='github logo'/></NavLink>
         </div>
 
         <div className="footer-block-two">

@@ -3,6 +3,7 @@ import './Explore.css'
 import Layout from '../../components/Layout/Layout'
 import SectionDivider from '../../components/SectionDivider/SectionDivider'
 import Search from '../../components/Search/Search.jsx'
+// eslint-disable-next-line
 import SearchBy from '../../components/SearchBy/SearchBy'
 import ContinentBar from '../../components/ContinentBar/ContinentBar.jsx'
 import StoryCard from '../../components/StoryCard/StoryCard'
@@ -28,6 +29,7 @@ export default function Explore(props) {
       }
     }
     fetchStories()
+    // eslint-disable-next-line
   }, [])
 
   // function handleSearchBy(field) {
@@ -52,7 +54,6 @@ export default function Explore(props) {
   //   console.log(stories[0].title,searchValue,searchResults)
   // }
   function handleContinentClick(continent) {
-    console.log('handleContinentClick called!')
     const results = stories.filter(story => {
       return (story.continent === continent)
     })
@@ -61,7 +62,6 @@ export default function Explore(props) {
   }
 
   function handleSearch(event) {
-    console.log('handleSearch called!')
     const searchValue = event.target.value.toLowerCase()
     const results = stories.filter(story => {
       return (story.title.toLowerCase().includes(searchValue))

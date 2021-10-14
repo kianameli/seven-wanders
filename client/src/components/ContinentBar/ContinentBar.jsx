@@ -34,8 +34,8 @@ export default function ContinentBar(props) {
             </div>
           )
         return (props.linksOn ?
-          <Link to='/explore'>{content}</Link>
-          : <div>{content}</div>
+          <Link to='/explore' key={index}>{content}</Link>
+          : <div key={index}>{content}</div>
         )
       })}
     </div>

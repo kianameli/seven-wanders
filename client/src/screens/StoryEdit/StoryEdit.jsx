@@ -103,6 +103,6 @@ export default function StoryEdit(props) {
         </button>
       </form>
     </div>
-    //  </Layout>
+    </Layout>
   )
 }
