@@ -2,11 +2,8 @@
 import { useState } from 'react'
 import './StoryCreate.css'
 import Layout from '../../components/Layout/Layout'
-
 import { createStory } from '../../services/stories'
 import { Redirect } from 'react-router-dom'
-
-import './StoryCreate.css'
 import SectionDivider from '../../components/SectionDivider/SectionDivider'
 
 
