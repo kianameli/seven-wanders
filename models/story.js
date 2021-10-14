@@ -8,9 +8,9 @@ const Story = new Schema(
     continent: { type: String, required: true },
     title: { type: String, required: true },
     author: { type: String, required: true },
-    userID: { type: String, required: true }, //key to user in users table?
     story: { type: String, required: true, unique: true },
     imageURL: { type: String, required: true },
+    userId: { type: Schema.Types.ObjectId, ref: "users" },
   },
   { timestamps: true }
 );

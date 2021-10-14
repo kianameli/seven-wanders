@@ -1,0 +1,32 @@
+.home-page-title {
+
+}
+
+.home-page-banner {
+  position: relative;
+  z-index: -1;
+  height: 50%;
+  width: 100%;
+
+}
+.home-title-words {
+  position: absolute;
+   top: 1500px;
+   left: 0;
+   width: 100%;
+   margin: 0 auto;
+   width: 800px;
+   height: 50px;
+   color:white;
+   text-align: left;
+}
+.home-title-title{
+
+}
+img{
+  position: relative;
+  z-index: -1;
+  height: 50%;
+  width: 100%;
+}
+

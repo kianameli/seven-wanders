@@ -1,5 +1,5 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import Home from './screens/Home/Home';
 import Explore from './screens/Explore/Explore';
@@ -9,10 +9,12 @@ import StoryEdit from './screens/StoryEdit/StoryEdit';
 import SignUp from './screens/SignUp/SignUp';
 import SignIn from './screens/SignIn/SignIn';
 import SignOut from './components/SignOut/SignOut';
+import { verifyUser } from './services/users';
 
 function App() {
 
   const [user, setUser] = useState(null)
+  const [continentFilter, setContinentFilter] = useState('')
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -22,37 +24,32 @@ function App() {
     fetchUser()
   }, [])
 
-
-
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home user={user} setUser={setUser} continentFilter={continentFilter} setContinentFilter={setContinentFilter} />
         </Route>
         <Route exact path="/explore">
-          <Explore />
+          <Explore user={user} continentFilter={continentFilter} setContinentFilter={setContinentFilter} />
         </Route>
         <Route exact path="/stories/:id">
-          <StoryDetail />
+          <StoryDetail user={user} />
         </Route>
         <Route exact path="/story-create">
-          <StoryCreate />
+          {user ? <StoryCreate user={user} /> : <Redirect to="/sign-up" />}
         </Route>
         <Route exact path="/stories/:id/edit">
-          <StoryEdit />
+          {user ? <StoryEdit user={user} /> : <Redirect to="/sign-in" />}
         </Route>
         <Route exact path="/sign-up">
-          <SignUp />
+          <SignUp setUser={setUser} />
         </Route>
         <Route exact path="/sign-in">
-          <SignIn />
+          <SignIn setUser={setUser} />
         </Route>
         <Route exact path="/sign-out">
-          <SignOut />
-        </Route>
-        <Route exact path="/">
-       
+          <SignOut setUser={setUser} />
         </Route>
       </Switch>
     </div>

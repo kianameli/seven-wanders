@@ -1,9 +1,9 @@
-.sign-in-background {
+.sign-up-background {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://res.cloudinary.com/dyyjvyqtn/image/upload/v1634169646/Isfahan-music-resized_mfaoym.png");
+  background-image: url("https://res.cloudinary.com/dyyjvyqtn/image/upload/v1634174491/ImaraMuruPeru-resize_zxi2pz.png");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,26 +11,17 @@
   height: 100vh;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-  background-color: #324a5185;
-  /* opacity: .5; */
-  color: white;
-  padding: 20px;
-  margin: 75px;
-  width: 50vw;
-}
-
-.sign-in-header {
+.sign-up-header {
   font-family: "Sulphur Point", sans-serif;
   font-size: 38px;
   margin: 50px;
 }
 
-.sign-in-input {
+.sign-up-message {
+  font-family: "Open Sans", sans-serif;
+}
+
+.sign-up-input {
   display: flex;
   flex-direction: row;
   background-color: #324a51d4;
