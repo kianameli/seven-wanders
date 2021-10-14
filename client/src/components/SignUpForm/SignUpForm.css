@@ -1,0 +1,48 @@
+.sign-up-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://res.cloudinary.com/dyyjvyqtn/image/upload/v1634174491/ImaraMuruPeru-resize_zxi2pz.png");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.sign-up-header {
+  font-family: "Sulphur Point", sans-serif;
+  font-size: 38px;
+  margin: 50px;
+}
+
+.sign-up-message {
+  font-family: "Open Sans", sans-serif;
+}
+
+.sign-up-input {
+  display: flex;
+  flex-direction: row;
+  background-color: #324a51d4;
+  border: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  /* z-index: 3; */
+}
+
+::placeholder {
+  color: white;
+  opacity: .75;
+}
+
+.submit-button {
+  color: black;
+  background: white;
+  border: black 2px;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  align-self: center;
+  cursor: pointer;
+  /* z-index: 3; */
+}
