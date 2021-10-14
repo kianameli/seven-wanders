@@ -60,46 +60,41 @@ const SignUpForm = (props) => {
   return (
     <>
       <div className='sign-up-background'>
-      <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='sign-up-background' />
-      </div>
-      <div className='form-container'>
-        <h1 className='sign-up-title'>Create Account</h1>
-        <h3 className='sign-up-message'>Become a member to tell your story</h3>
-        <form onSubmit={onSignUp}>
-          
-          <input
-            required
-            type='text'
-            name='username'
-            value={username}
-            placeholder='Username'
-            onChange={handleChange} />
-          
-          <input
-            required
-            type='email'
-            name='email'
-            value={email}
-            placeholder='Email Address'
-            onChange={handleChange} />
-          
-          <input
-            required
-            name='password'
-            value={password}
-            type='password'
-            placeholder='Password'
-            onChange={handleChange} />
-          
-          <input
-            required
-            name='passwordConfirmation'
-            value={passwordConfirmation}
-            type='password'
-            placeholder='Confirm Password'
-            onChange={handleChange} />
-          {renderError()}
-        </form>
+        <div className='form-container'>
+          <h1 className='sign-up-header'>Create Account</h1>
+          <h3 className='sign-up-message'>Become a member to tell your story</h3>
+          <form onSubmit={onSignUp}>
+            <input className='sign-up-input'
+              required
+              type='text'
+              name='username'
+              value={username}
+              placeholder='| Username'
+              onChange={handleChange} />
+            <input className='sign-up-input'
+              required
+              type='email'
+              name='email'
+              value={email}
+              placeholder='| Email Address'
+              onChange={handleChange} />
+            <input className='sign-up-input'
+              required
+              name='password'
+              value={password}
+              type='password'
+              placeholder='| Password'
+              onChange={handleChange} />
+            <input className='sign-up-input'
+              required
+              name='passwordConfirmation'
+              value={passwordConfirmation}
+              type='password'
+              placeholder='| Confirm Password'
+              onChange={handleChange} />
+            {renderError()}
+          </form>
+        </div>
       </div>
     </>
   )

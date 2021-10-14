@@ -50,7 +50,7 @@ const SignIn = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign In</button>
+      return <button className='submit-button' type='submit'>Sign In</button>
     }
   }
 
@@ -58,29 +58,28 @@ const SignIn = (props) => {
 
   return (
     <Layout>
+
       <div className='sign-in-background'>
-        <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='sign-in-back' />
-      </div><div className='form-container'>
-        <h1 className='sign-in-header'>Dive back in</h1>
-        <form onSubmit={onSignIn}>
-
-          <input className='sign-in-input'
-            required
-            type='text'
-            name='username'
-            value={username}
-            placeholder='| Username'
-            onChange={handleChange} />
-
-          <input className='sign-in-input'
-            required
-            name='password'
-            value={password}
-            type='password'
-            placeholder='| Password'
-            onChange={handleChange} />
-          {renderError()}
-        </form>
+        <div className='form-container'>
+          <h1 className='sign-in-header'>Dive back in</h1>
+          <form onSubmit={onSignIn}>
+            <input className='sign-in-input'
+              required
+              type='text'
+              name='username'
+              value={username}
+              placeholder='| Username'
+              onChange={handleChange} />
+            <input className='sign-in-input'
+              required
+              name='password'
+              value={password}
+              type='password'
+              placeholder='| Password'
+              onChange={handleChange} />
+            {renderError()}
+          </form>
+        </div>
       </div>
     </Layout>
   )

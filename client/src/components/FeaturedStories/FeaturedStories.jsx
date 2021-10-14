@@ -1,6 +1,6 @@
 import './FeaturedStories.css'
 import { getStories } from '../../services/stories.js'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import StoryCard from '../StoryCard/StoryCard';
 
 export default function FeaturedStories() {
@@ -18,7 +18,7 @@ export default function FeaturedStories() {
       setFeaturedStories([allstories[featureIndices[0]], allstories[featureIndices[1]], allstories[featureIndices[2]]])
     }
     fetchStories();
-  },[])
+  },[]) 
   
   //setFeaturedStories(allstories.slice(0, 3))
 
