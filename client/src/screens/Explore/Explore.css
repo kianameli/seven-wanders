@@ -1,0 +1,10 @@
+
+.mapped-images {
+display: grid;
+grid-template-rows:  3;
+grid-template-columns: 350px 350px 350px;
+justify-content: space-evenly;
+padding: 100px;
+justify-items: center;
+}
+
