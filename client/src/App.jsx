@@ -44,7 +44,7 @@ function App() {
           {user ? <StoryEdit user={user} /> : <Redirect to="/sign-in" />}
         </Route>
         <Route exact path="/sign-up">
-          <SignUp setUser={setUser} />
+          <SignUp user={user} setUser={setUser} />
         </Route>
         <Route exact path="/sign-in">
           <SignIn setUser={setUser} />

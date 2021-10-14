@@ -5,7 +5,7 @@ export default function SignUp(props) {
   return (
     <Layout user={ props.user }>
     <div>
-    <SignUpForm/>
+        <SignUpForm user={props.user} setUser={props.setUser}/>
     </div>
     </Layout>
   )

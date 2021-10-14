@@ -6,7 +6,6 @@ import { createStory } from '../../services/stories'
 import { Redirect } from 'react-router-dom'
 import SectionDivider from '../../components/SectionDivider/SectionDivider'
 
-
 export default function StoryCreate(props) {
 
   const [story, setStory] = useState({
