@@ -12,8 +12,41 @@
 }
 
 .banner-text {
-color: white;
-font-family: "Sulphur Point", sans-serif;
-font-size: 36px;
-text-align: end;
+  color: white;
+  font-family: "Sulphur Point", sans-serif;
+  font-size: 36px;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.create-form-input {
+  border: none;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 15px;
+  font-size: 18px;
+  width: 93vw;
+}
+
+.create-form-input::placeholder {
+  color: black;
+  opacity: .75;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.create-submit-button {
+  justify-self: center;
+  color: black;
+  background: transparent;
+  border: solid black 2px;
+  margin: 15px;
+  margin-bottom: 50px;
+  padding: 10px;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100px;
 }
