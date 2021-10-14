@@ -98,8 +98,8 @@ const SignUpForm = (props) => {
                   onChange={handleChange} />
               </div>
             </div>
+            {renderError()}
           </form>
-          {renderError()}
         </div>
       </div>
     </>
