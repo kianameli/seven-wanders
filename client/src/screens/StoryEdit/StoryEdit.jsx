@@ -1,4 +1,4 @@
-import './StoryEdit.css'
+import '../StoryCreate/StoryCreate.css'
 import { updateStory, getStory } from '../../services/stories'
 import { useEffect, useState } from 'react'
 import Layout from '../../components/Layout/Layout'
@@ -7,7 +7,7 @@ import { useParams, Redirect } from 'react-router-dom'
 
 export default function StoryEdit(props) {
 
-  const [story, setStory] = useState({location: '', country: '', continent: '', title: '', author: '', story: '', imageURL: '', userId: '',});
+  const [story, setStory] = useState({ location: '', country: '', continent: '', title: '', author: '', story: '', imageURL: '', userId: '', });
   const [isUpdated, setIsUpdated] = useState(false)
   let { id } = useParams()
 
@@ -30,7 +30,7 @@ export default function StoryEdit(props) {
   const handleSubmit = async (event) => {
     event.preventDefault()
     await updateStory(id, story)
-    setIsUpdated(prev=>!prev)
+    setIsUpdated(prev => !prev)
   }
 
   if (isUpdated) {
@@ -39,12 +39,15 @@ export default function StoryEdit(props) {
 
   return (
     <Layout user={props.user}>
-    
-      <div className='edit-form-container'>
-        <form className='edit-form' onSubmit={handleSubmit}>
-          <SectionDivider text='Title'/>
+      <div className='create-banner-container'>
+        <h4 className='banner-text'>Change your story</h4>
+      </div>
+      <div className='create-form-container'>
+        <form className='create-form' onSubmit={handleSubmit}>
+
+          <SectionDivider text='Title' />
           <input
-            className='edit-input-title'
+            className='create-input-title'
             placeholder={story.title}
             value={story.title}
             name='title'
@@ -52,30 +55,30 @@ export default function StoryEdit(props) {
             // autoFocus
             onChange={handleChange}
           />
-          
-          <SectionDivider text='Image URL' />
+
+          <SectionDivider text='Image Link' />
           <input
-            className='edit-input-imageUrl'
+            className='create-input-imageUrl'
             placeholder={story.imageURL}
             value={story.imageURL}
-            name='image-link'
+            name='imageURL'
             required
             onChange={handleChange}
           />
-          
+
           <SectionDivider text='Location' />
           <input
-            className='edit-input-location'
+            className='create-input-location'
             placeholder={story.location}
             value={story.location}
             name='location'
             required
             onChange={handleChange}
           />
-          
+
           <SectionDivider text='Country' />
           <input
-            className='edit-input-country'
+            className='create-input-country'
             placeholder={story.country}
             value={story.country}
             name='country'
@@ -83,29 +86,29 @@ export default function StoryEdit(props) {
             onChange={handleChange}
           />
 
-          <SectionDivider text='Continent'/>
+          <SectionDivider text='Continent' />
           <input
-            className='edit-input-continent'
+            className='create-input-continent'
             placeholder={story.continent}
             value={story.continent}
             name='continent'
             required
             onChange={handleChange}
           />
-        
-        <SectionDivider text='Story' />
-        <input
-          className='edit-input-story'
-          placeholder={story.story}
-          value={story.story}
-          name='story'
-          required
-          onChange={handleChange}
-        />
-          
-        <button type='submit' className='edit-submit-button'>Save</button>
-          
-      </form>
+
+          <SectionDivider text='Story' />
+          <input
+            className='create-input-story'
+            placeholder={story.story}
+            value={story.story}
+            name='story'
+            required
+            onChange={handleChange}
+          />
+
+          <button type='submit' className='edit-submit-button'>Save</button>
+
+        </form>
       </div>
     </Layout>
   )
