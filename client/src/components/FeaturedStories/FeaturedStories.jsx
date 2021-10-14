@@ -19,26 +19,12 @@ export default function FeaturedStories() {
     }
     fetchStories();
   },[]) 
-  
-  //setFeaturedStories(allstories.slice(0, 3))
 
-  // for (emptyArr.length < 3) {
-    //   let x = Math.floor(Math.random() * allStories.length)
-    //   if (!emptyArr.includes(x)) {
-  //     emptyArr.push(x);
-  //   }
-  // }
-  //console.log(emptyArr);
 
   return (
     <div>
       featured
-      {featuredStories?.map(story => {
-        return (
-          <StoryCard story={story}/>
-          // <h1>{story.title}</h1>
-        )
-      })}
+      {featuredStories?.map((story,index) => <StoryCard story={story} key={index}/>)}
     </div>
   )
 }

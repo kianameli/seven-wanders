@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './StoryCard.css'
 
 export default function StoryCard(props) {
-  const {_id,title,location,country,continent,author,story,imageURL}=props.story
+  const {_id,title,location,country,imageURL}=props.story
   
   return (
     <Link

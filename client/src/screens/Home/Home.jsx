@@ -1,6 +1,5 @@
 import "./Home.css";
 import Layout from "../../components/Layout/Layout";
-import { useEffect, useState } from "react";
 import ContinentBar from "../../components/ContinentBar/ContinentBar";
 import FeaturedStories from "../../components/FeaturedStories/FeaturedStories";
 import SectionDivider from "../../components/SectionDivider/SectionDivider";
