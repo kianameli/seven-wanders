@@ -30,7 +30,7 @@ export default function ContinentBar(props) {
               key={index}
             >
               <img className='continent-img' src={continent.image} alt={continent.name} />
-              <p>{`${continent.name}`}</p>
+              <p className='continet-title'>{`${continent.name}`}</p>
             </div>
           )
         return (props.linksOn ?
