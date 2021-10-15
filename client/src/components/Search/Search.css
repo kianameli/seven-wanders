@@ -1,0 +1,9 @@
+.search-bar {
+  background-color: #324a51d4;
+  border: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin: 15px;
+  padding: 5px 0 5px 5px;
+  font-size: 18px;
+}
