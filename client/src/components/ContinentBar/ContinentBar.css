@@ -3,12 +3,11 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: auto;
-  max-width: 100%;
+  max-width: auto;
   padding: 70px 0 70px 0;
 }
 .continent-button {
   width: auto;
-  max-width: 100px;
   flex-direction: row;
 }
 
@@ -17,8 +16,9 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  padding: 8px;
+  /* padding: 8px; */
   border-color: #324a51;
+  justify-items: center;
 }
 
 .continent-button:hover .continent-img {
@@ -29,4 +29,8 @@ p {
   text-align: center;
   justify-content: space-evenly;
   width: 100%;
+}
+.continet-title {
+  
+  justify-content: center;
 }
