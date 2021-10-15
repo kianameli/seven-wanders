@@ -36,7 +36,7 @@ export default function Home(props) {
       <div className="explore-section">
 
         <SectionDivider text='Explore' />
-        <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={true} />
+        <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={false} />
       </div>
 
       {/* featured stories */}
