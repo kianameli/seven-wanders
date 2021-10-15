@@ -13,10 +13,10 @@ export default function StoryCreate(props) {
     country: '',
     continent: '',
     title: '',
-    author: '',
+    author: props.user.username,
     story: '',
     imageURL: '',
-    userId: '',
+    userId: props.user.id,
   })
 
   const [isCreated, setCreated] = useState(false)
@@ -31,6 +31,7 @@ export default function StoryCreate(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log(story)
     const created = await createStory(story)
     setCreated({ created })
   }
@@ -42,7 +43,7 @@ export default function StoryCreate(props) {
   return (
     <Layout user={props.user}>
       <div className='create-banner-container'>
-        <h4 className='banner-text'>Tell your story</h4>
+        <div className='create-banner-text'>Tell your story</div>
       </div>
       <div className='create-form-container'>
         <form className='create-form' onSubmit={handleSubmit}>
@@ -54,7 +55,6 @@ export default function StoryCreate(props) {
             value={story.title}
             name='title'
             required
-            autoFocus
             onChange={handleChange}
           />
 

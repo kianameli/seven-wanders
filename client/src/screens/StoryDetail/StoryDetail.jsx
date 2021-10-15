@@ -24,17 +24,19 @@ export default function StoryDetail(props) {
 
   return (
     <Layout user={props.user}>
-
-      <div>
-        <br/><br/><br/>
+<div className='edit-page'>
+      <div className='edit-page-details'>
+        
         <SectionDivider text={`${country}, ${continent}`} />
-        <h1>{title}</h1>
+        <h1>{`${title}`}</h1>
         <p>by {author}</p>
         <img src={imageURL} alt={location} />
         <section>{story}</section>
-        <Link to={`/stories/${id}/edit`}><button>Edit Story</button></Link>
-      
+        <div className='button-section'>
+        <Link className='button' to={`/stories/${id}/edit`}><button>Edit Story</button></Link>
+      </div>
     </div>
-    </Layout>
+    </div>
+    </Layout> 
   )
 }
