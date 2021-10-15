@@ -38,7 +38,28 @@
   font-size: 18px;
   width: 93vw;
 }
+.create-form-select {
+  width: 20vw;
+  border: none;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 15px;
+  font-size: 18px;
+  width: 93vw;
+}
 
+.continent-option-placeholder {
+  color: black;
+  opacity: 0.75;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+.continent-option {
+  color: black;
+  opacity: 1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
 .create-form-input::placeholder {
   color: black;
   opacity: 0.75;
