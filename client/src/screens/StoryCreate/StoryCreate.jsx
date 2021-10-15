@@ -16,7 +16,7 @@ export default function StoryCreate(props) {
     author: props.user.username,
     story: '',
     imageURL: '',
-    userId: props.user,
+    userId: props.user.id,
   })
 
   const [isCreated, setCreated] = useState(false)
@@ -31,6 +31,7 @@ export default function StoryCreate(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log(story)
     const created = await createStory(story)
     setCreated({ created })
   }
