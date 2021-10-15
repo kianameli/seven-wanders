@@ -55,7 +55,6 @@ export default function StoryCreate(props) {
             value={story.title}
             name='title'
             required
-            autoFocus
             onChange={handleChange}
           />
 
