@@ -42,11 +42,10 @@
 }
 
 .mapped-images {
-  display: grid;
-  /* grid-template-rows: 2; */
-  grid-template-columns: 40% 40%;
+  display: flex;
+  flex: 1 1 30%;
+  flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 100px;
   justify-items: center;
   height: 100vh;
   overflow-y: auto;
