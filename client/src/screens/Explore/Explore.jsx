@@ -76,12 +76,15 @@ export default function Explore(props) {
   // console.log(continentFilter)
   return (
     <Layout user={props.user}>
-
+<div className='explore-search-container'>
       <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='explore-back' />
+      <div className='search-explore'>
       <h1 className='explore-title'>Explore</h1>
 
-      <Search handleSearch={handleSearch} handleSubmit={handleSubmit} />
+      <Search className='search-bar' handleSearch={handleSearch} handleSubmit={handleSubmit} />
       {/* <SearchBy handleSearchBy={handleSearchBy} handleSubmit={handleSubmit}/> */}
+      </div>
+      </div>
       <SectionDivider text='Continents' />
       <p>{continentFilter}</p>
       <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={false} />
