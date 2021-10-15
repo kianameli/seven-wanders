@@ -47,22 +47,24 @@ const Nav = ({ user }) => {
 
           <div className="continent-links">
             <h2 className="footer-titles">Continents</h2>
-            <div className="c-link-contanier">
-              <div className="c-link-list1">
-              <NavLink className="c-link" to="/">North America</NavLink>
-              <NavLink className="c-link" to="/">South America</NavLink>
-              <NavLink className="c-link" to="/">Australia</NavLink>
+            <div className="c-link-contanier" style={{"display": "flex", "flex-flow": "row wrap"}}>
+              <div className="c-link-list1" style={{"width": "50%", "align-items": "center"}}>
+                <NavLink className="c-link" to="/">North America</NavLink>
+                <NavLink className="c-link" to="/">South America</NavLink>
+                <NavLink className="c-link" to="/">Australia</NavLink>
+                <NavLink className="c-link" to="/">Antarctica</NavLink>
               </div>
-              <div className="c-link-list2">
-              <NavLink className="c-link" to="/">Asia</NavLink>
-              <NavLink className="c-link" to="/">Europe</NavLink>
-              <NavLink className="c-link" to="/">Africa</NavLink>
+              <div className="c-link-list2" style={{"width": "50%", "align-items": "center"}}>
+                <NavLink className="c-link" to="/">Asia</NavLink>
+                <NavLink className="c-link" to="/">Europe</NavLink>
+                <NavLink className="c-link" to="/">Africa</NavLink>
               </div>
-              <NavLink className="c-link" to="/">Antarctica</NavLink>
+              <div className="c-link-list3">
+              </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </footer>
   )
 }

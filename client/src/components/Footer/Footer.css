@@ -1,10 +1,11 @@
 footer {
   display: flex;
-  width: 100%;
+  width: 100vw;
   background-color: #324a51;
   position: relative;
   left: 0;
   bottom: 0;
+  padding: 5vh 0;
 }
 
 .footer-container {
@@ -22,13 +23,13 @@ footer {
   text-decoration: none;
   font-family: "Sulphur Point", sans-serif;
   font-weight: 800;
-  font-size: 34px;
+  font-size: 30px;
   text-align: center;
 }
 
 .github-logo {
   z-index: 1;
-  max-width: 14vw;
+  max-width: 12vw;
 }
 
 .footer-block-one {
@@ -47,6 +48,7 @@ footer {
   border-left: 2px solid white;
   height: 100%;
   width: 100%;
+  font-size: 0.9em;
 }
 
 .footer-block-three {
@@ -62,6 +64,7 @@ footer {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  gap: 10px;
 }
 
 .menu-links {
@@ -72,6 +75,8 @@ footer {
   font-family: "Open Sans", sans-serif;
   width: 100%;
   text-align: center;
+  font-size: 0.9em;
+  gap: 10px;
 }
 
 .continent-links {
@@ -80,6 +85,8 @@ footer {
   flex-wrap: wrap;
   font-family: "Open Sans", sans-serif;
   width: 100%;
+  font-size: 0.9em;
+  padding-right: 5vw;
 }
 
 .footer-titles {
@@ -94,21 +101,21 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 2;
+  flex: 1;
 }
 
 .c-link-container {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .c-link {
+  display: flex;
   color: white;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex: 2;
+  flex-flow: row wrap;
+  flex: 1;
 }
 
 .m-link {
@@ -117,11 +124,26 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 2;
+  flex: 1;
 }
 
 .c-link-list1,
-.c-link-list2 {
+.c-link-list2,
+.c-link-list3 {
   display: flex;
   flex-direction: column;
+}
+
+.c-link-list1 {
+  display: flex;
+  width: 50%;
+}
+
+.c-link-list2 {
+  display: flex;
+  width: 50%;
+}
+
+.c-link-list3 {
+  display: flex;
 }
