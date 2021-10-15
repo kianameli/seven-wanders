@@ -7,21 +7,21 @@ export default function StoryCard(props) {
   return (
     
 
+    <div className='story-card-image-container'>
     <Link
       to={`/stories/${_id}`}
       className='story-card-container'
       >
       
-      <div className='story-card-image-container'>
         <img className='stories-image'
           src={imageURL}
           alt={title}
           />
+    </Link>
         <p>{title}</p>
-        <p>{location}, {country}</p>
+        <p>{location}, {country} </p>
       </div>
       
-    </Link>
           
   )
 }
