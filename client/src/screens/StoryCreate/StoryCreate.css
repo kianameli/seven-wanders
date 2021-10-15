@@ -50,3 +50,18 @@
   cursor: pointer;
   width: 100px;
 }
+
+.edit-submit-button {
+  justify-self: center;
+  color: black;
+  background: transparent;
+  border: solid black 2px;
+  margin: 15px;
+  margin-bottom: 50px;
+  padding: 10px;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100px;
+}
