@@ -47,7 +47,7 @@ export default function StoryEdit(props) {
 
           <SectionDivider text='Title' />
           <input
-            className='create-input-title'
+            className='create-form-input'
             placeholder={story.title}
             value={story.title}
             name='title'
@@ -58,7 +58,7 @@ export default function StoryEdit(props) {
 
           <SectionDivider text='Image Link' />
           <input
-            className='create-input-imageUrl'
+            className='create-form-input'
             placeholder={story.imageURL}
             value={story.imageURL}
             name='imageURL'
@@ -68,7 +68,7 @@ export default function StoryEdit(props) {
 
           <SectionDivider text='Location' />
           <input
-            className='create-input-location'
+            className='create-form-input'
             placeholder={story.location}
             value={story.location}
             name='location'
@@ -78,7 +78,7 @@ export default function StoryEdit(props) {
 
           <SectionDivider text='Country' />
           <input
-            className='create-input-country'
+            className='create-form-input'
             placeholder={story.country}
             value={story.country}
             name='country'
@@ -88,7 +88,7 @@ export default function StoryEdit(props) {
 
           <SectionDivider text='Continent' />
           <input
-            className='create-input-continent'
+            className='create-form-input'
             placeholder={story.continent}
             value={story.continent}
             name='continent'
@@ -97,13 +97,14 @@ export default function StoryEdit(props) {
           />
 
           <SectionDivider text='Story' />
-          <input
-            className='create-input-story'
+          <textarea
+            className='create-form-input'
             placeholder={story.story}
             value={story.story}
             name='story'
             required
             onChange={handleChange}
+            rows={10}
           />
 
           <button type='submit' className='edit-submit-button'>Save</button>
