@@ -7,7 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 40vh;
   margin-top: 100px;
   margin-bottom: 25px;
   z-index: 0;
@@ -42,9 +42,10 @@
 }
 
 .mapped-images {
-  display: flex;
-  flex: 1 1 30%;
-  flex-flow: row wrap;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  display: grid;
+  resize:horizontal;
+  /* grid-template-columns: 40% 40%; */
   justify-content: space-evenly;
   justify-items: center;
   height: 100vh;
