@@ -13,10 +13,10 @@ export default function StoryCreate(props) {
     country: '',
     continent: '',
     title: '',
-    author: '',
+    author: props.user.username,
     story: '',
     imageURL: '',
-    userId: '',
+    userId: props.user,
   })
 
   const [isCreated, setCreated] = useState(false)
