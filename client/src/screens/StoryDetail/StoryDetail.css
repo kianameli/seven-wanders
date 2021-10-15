@@ -1,7 +1,7 @@
-h1 {
+.header-h1 {
   text-align: center;
 }
-section {
+.section-edit {
   text-align: center;
   padding: 50px 0 50px 0;
 }
@@ -13,7 +13,7 @@ section {
   position: relative;
   padding-top: 150px;
 }
-button{
+.edit-button{
   background-color: white;
 
 }

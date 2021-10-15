@@ -28,12 +28,12 @@ export default function StoryDetail(props) {
       <div className='edit-page-details'>
         
         <SectionDivider text={`${country}, ${continent}`} />
-        <h1>{`${title}`}</h1>
+        <h1 className='header-h1'>{`${title}`}</h1>
         <p>by {author}</p>
         <img src={imageURL} alt={location} />
-        <section>{story}</section>
+        <section className='section-edit'>{story}</section>
         <div className='button-section'>
-        <Link className='button' to={`/stories/${id}/edit`}><button>Edit Story</button></Link>
+        <Link className='button' to={`/stories/${id}/edit`}><button className='edit-button'>Edit Story</button></Link>
       </div>
     </div>
     </div>
