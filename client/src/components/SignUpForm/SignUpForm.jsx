@@ -62,7 +62,7 @@ const SignUpForm = (props) => {
       <div className='sign-up-background'>
         <div className='form-container'>
           <h1 className='sign-up-header'>Create Account</h1>
-          <h3 className='sign-up-message'>Become a member, tell your story</h3>
+          <h3 className='sign-up-message'>Become a member to tell your story</h3>
           <form onSubmit={onSignUp}>
             <div className='sign-up-credentials-container'>
               <div className='sign-up-credentials'>
