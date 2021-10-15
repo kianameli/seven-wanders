@@ -40,11 +40,13 @@ export default function Home(props) {
       </div>
 
       {/* tell your story */}
-      <div className="tell-your-story">
-        <SectionDivider text='Tell Your Story' />
+      {!user && 
+        <div className="tell-your-story">
+          <SectionDivider text='Tell Your Story' />
 
-        <SignUpForm user={user} setUser={setUser} />
-      </div>
+          <SignUpForm user={user} setUser={setUser} />
+        </div>
+      }
     </Layout>
   );
 }

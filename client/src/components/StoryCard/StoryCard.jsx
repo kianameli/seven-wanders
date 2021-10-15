@@ -12,9 +12,9 @@ export default function StoryCard(props) {
       to={`/stories/${_id}`}
       className='story-card-container'
       >
-      
         <img className='stories-image'
           src={imageURL}
+          // onerror={(e)=>{e.target.onError = null; e.target.src = './compass.png'}}
           alt={title}
           />
     </Link>
