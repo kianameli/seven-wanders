@@ -32,6 +32,10 @@ footer {
   max-width: 12vw;
 }
 
+.github-image {
+  width: 100%;
+}
+
 .footer-block-one {
   display: flex;
   flex-direction: column;
