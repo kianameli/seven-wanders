@@ -22,8 +22,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 30px;
-  padding: 25px 0px;
   border-right: 2px solid black;
   width: 33vw;
 }
@@ -35,12 +33,10 @@ footer {
   font-weight: 800;
   font-size: 38px;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .github-logo {
   z-index: 1;
-  margin-top: 10px;
   max-width: 18vw;
 }
 
@@ -74,7 +70,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-right: 30px;
   width: 33vw;
   /* 
 push menu and continents away from each other so that they take up even amounts of last third of footer
