@@ -1,6 +1,6 @@
 import './StoryDetail.css'
 import Layout from '../../components/Layout/Layout'
-import { getStory } from '../../services/stories'
+import { deleteStory, getStory } from '../../services/stories'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import SectionDivider from '../../components/SectionDivider/SectionDivider';
@@ -24,6 +24,10 @@ export default function StoryDetail(props) {
     // eslint-disable-next-line
   }, [])
 
+  const handleDelete = async (e)=> {
+    await deleteStory(_id)
+  }
+  
   return (
     <Layout user={props.user}>
       <div className='edit-page'>
@@ -38,6 +42,7 @@ export default function StoryDetail(props) {
           <section className='section-edit'>{story}</section>
           {props.user && <div className='button-section'>
             <Link to={`/stories/${id}/edit`}><button className='edit-button'>Edit Story</button></Link>
+            <Link to={`/explore`}><button className='delete-button' onClick={handleDelete}>Delete Story</button></Link>
           </div>}
           <div className="featured-stories">
           <SectionDivider text="Featured Stories"/>
