@@ -37,8 +37,7 @@ function App() {
           <StoryDetail user={user} />
         </Route>
         <Route exact path="/story-create">
-          {/* {user ? <StoryCreate user={user} /> : <Redirect to="/sign-up" />} */}
-          <StoryCreate user={user} />
+          {user ? <StoryCreate user={user} /> : <Redirect to="/sign-up" />}
         </Route>
         <Route exact path="/stories/:id/edit">
           {user ? <StoryEdit user={user} /> : <Redirect to="/sign-in" />}

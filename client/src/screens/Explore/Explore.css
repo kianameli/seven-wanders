@@ -2,7 +2,7 @@
   display: flex;
   align-items: end;
   justify-content: start;
-  background-image: url("https://res.cloudinary.com/dyyjvyqtn/image/upload/v1634307747/MachuPicchu-banner_s4clxx.png");
+  background-image: url("../../images/MachuPicchu-banner.png");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
   z-index: 0;
 }
 
-.explore-banner-text{
+.explore-banner-text {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -50,7 +50,6 @@
   justify-items: center;
   height: 100vh;
   overflow-y: auto;
-
 }
 @media only screen and (max-width: 965px) {
   .mapped-images {

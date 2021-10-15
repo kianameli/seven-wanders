@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://res.cloudinary.com/dyyjvyqtn/image/upload/v1634169646/Isfahan-music-resized_mfaoym.png");
+  background-image: url("../../images/Isfahan-music-resized.png");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 
 ::placeholder {
   color: white;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .submit-button {
