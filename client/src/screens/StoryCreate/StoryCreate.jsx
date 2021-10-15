@@ -99,14 +99,6 @@ export default function StoryCreate(props) {
             <option className='continent-option' value='Australia'>Australia</option>
             <option className='continent-option' value='Antarctica'>Antarctica</option>
           </select>
-          {/* <input
-            className='create-form-input'
-            placeholder='| e.g., Asia'
-            value={story.continent}
-            name='continent'
-            required
-            onChange={handleChange}
-          /> */}
 
           <SectionDivider text='Story' />
           <textarea
