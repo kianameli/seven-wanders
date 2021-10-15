@@ -1,10 +1,18 @@
 .mapped-images {
   display: grid;
-  grid-template-rows: 2;
-  grid-template-columns: 350px 350px;
+  /* grid-template-rows: 2; */
+  grid-template-columns: 40% 40%;
   justify-content: space-evenly;
   padding: 100px;
   justify-items: center;
   height: 100vh;
   overflow-y: auto;
+
+}
+@media only screen and (max-width: 965px) {
+  .mapped-images {
+    grid-template-rows: 2;
+    grid-template-columns: 40% 40%;
+    padding: 0px;
+  }
 }
