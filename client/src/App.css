@@ -4,10 +4,6 @@ html {
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-  width: 0;  
-  background: transparent;  
-}
-
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  width: 0;
+  background: transparent;
 }

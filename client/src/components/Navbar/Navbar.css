@@ -60,3 +60,8 @@ nav {
 .header-link {
   font-size: 1.2em;
 }
+
+.header-link:hover {
+  color: #324a51;
+  transform: scale(1.1);
+}
