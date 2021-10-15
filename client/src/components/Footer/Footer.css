@@ -5,7 +5,7 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-  padding: 5vh 0;
+  padding: 2vh 0;
 }
 
 .footer-container {
@@ -30,6 +30,7 @@ footer {
 .github-logo {
   z-index: 1;
   max-width: 12vw;
+  margin-top: 15px;
 }
 
 .github-image {
@@ -91,12 +92,15 @@ footer {
   width: 100%;
   font-size: 0.9em;
   padding-right: 5vw;
+  font-size: 14px;
 }
 
 .footer-titles {
   font-family: "Sulphur Point", sans-serif;
+  font-size: 24px;
   vertical-align: baseline;
   text-align: center;
+  text-decoration: underline;
 }
 
 .f-link {
@@ -106,6 +110,7 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1;
+  font-size: 14px;
 }
 
 .c-link-container {
@@ -120,6 +125,7 @@ footer {
   text-decoration: none;
   flex-flow: row wrap;
   flex: 1;
+  font-size: 14px;
 }
 
 .m-link {
@@ -129,6 +135,7 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1;
+  font-size: 14px;
 }
 
 .c-link-list1,

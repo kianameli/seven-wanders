@@ -87,14 +87,15 @@ export default function StoryEdit(props) {
           />
 
           <SectionDivider text='Continent' />
-          <input
-            className='create-form-input'
-            placeholder={story.continent}
-            value={story.continent}
-            name='continent'
-            required
-            onChange={handleChange}
-          />
+          <select className='create-form-select' name='continent' value={story.continent} onChange={handleChange}>
+            <option className='continent-option' value='North America'>North America</option>
+            <option className='continent-option' value='South America'>South America</option>
+            <option className='continent-option' value='Europe'>Europe</option>
+            <option className='continent-option' value='Asia'>Asia</option>
+            <option className='continent-option' value='Africa'>Africa</option>
+            <option className='continent-option' value='Australia'>Australia</option>
+            <option className='continent-option' value='Antarctica'>Antarctica</option>
+          </select>
 
           <SectionDivider text='Story' />
           <textarea
