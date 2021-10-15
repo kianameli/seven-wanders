@@ -13,7 +13,7 @@
   z-index: 0;
 }
 
-.banner-text {
+.create-banner-text {
   display: flex;
   align-items: end;
   color: white;
@@ -22,6 +22,8 @@
   height: 15vh;
   min-height: 100px;
   max-height: 150px;
+  padding-left: 15px;
+  padding-bottom: 5px;
   font-family: "Sulphur Point", sans-serif;
   font-size: 36px;
   font-weight: 800;

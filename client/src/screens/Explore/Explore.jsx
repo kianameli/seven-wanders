@@ -21,7 +21,7 @@ export default function Explore(props) {
       setStories(allStories)
       if (continentFilter !== '') {
         const filteredStories = allStories.filter(story => {
-            return story.continent === continentFilter
+          return story.continent === continentFilter
         })
         setSearchResults(filteredStories)
       } else {
@@ -76,15 +76,14 @@ export default function Explore(props) {
   // console.log(continentFilter)
   return (
     <Layout user={props.user}>
-<div className='explore-search-container'>
-      <img src='https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fdyyjvyqtn%2Fimage%2Fupload%2Fv1634060377%2F33pOL_apxepy.jpg' alt='explore-back' />
-      <div className='search-explore'>
-      <h1 className='explore-title'>Explore</h1>
+      <div className='explore-banner-container'>
+        <div className='explore-banner-text'>Explore</div>
+        <div className='search-bar'>
+          <Search handleSearch={handleSearch} handleSubmit={handleSubmit} />
+          {/* <SearchBy handleSearchBy={handleSearchBy} handleSubmit={handleSubmit}/> */}
+        </div>
+      </div>
 
-      <Search className='search-bar' handleSearch={handleSearch} handleSubmit={handleSubmit} />
-      {/* <SearchBy handleSearchBy={handleSearchBy} handleSubmit={handleSubmit}/> */}
-      </div>
-      </div>
       <SectionDivider text='Continents' />
       <p>{continentFilter}</p>
       <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={false} />
@@ -92,9 +91,9 @@ export default function Explore(props) {
       <SectionDivider text='Stories' />
       <div className='stories-section'>
         <div className='mapped-images'>
-        {searchResults.map((story, index) => <StoryCard key={index} story={story} />)}
+          {searchResults.map((story, index) => <StoryCard key={index} story={story} />)}
         </div>
       </div>
-    </Layout>
+    </Layout >
   )
 }

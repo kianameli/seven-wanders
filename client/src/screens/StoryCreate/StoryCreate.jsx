@@ -42,7 +42,7 @@ export default function StoryCreate(props) {
   return (
     <Layout user={props.user}>
       <div className='create-banner-container'>
-        <div className='banner-text'>Tell your story</div>
+        <div className='create-banner-text'>Tell your story</div>
       </div>
       <div className='create-form-container'>
         <form className='create-form' onSubmit={handleSubmit}>
