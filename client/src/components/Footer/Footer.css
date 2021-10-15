@@ -1,10 +1,7 @@
 footer {
   flex: 1;
   width: 100%;
-  background-color: #324a51;
-  position: relative;
-  left: 0;
-  bottom: 0;
+  background-color: #324A51;
 }
 
 .footer-container {

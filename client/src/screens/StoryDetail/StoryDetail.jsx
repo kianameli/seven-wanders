@@ -28,7 +28,7 @@ export default function StoryDetail(props) {
       <div>
         <br/><br/><br/>
         <SectionDivider text={`${country}, ${continent}`} />
-        <h1>{title}</h1>
+        <SectionDivider><h1>{title}</h1></SectionDivider>
         <p>by {author}</p>
         <img src={imageURL} alt={location} />
         <section>{story}</section>
