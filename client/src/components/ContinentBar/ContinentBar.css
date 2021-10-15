@@ -5,6 +5,7 @@
   width: auto;
   max-width: auto;
   padding: 70px 0 70px 0;
+  flex-flow: row wrap;
 }
 .continent-button {
   width: auto;
@@ -31,6 +32,5 @@ p {
   width: 100%;
 }
 .continet-title {
-  
   justify-content: center;
 }
