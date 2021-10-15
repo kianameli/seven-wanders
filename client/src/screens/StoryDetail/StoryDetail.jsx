@@ -6,6 +6,7 @@ import { useParams } from 'react-router';
 import SectionDivider from '../../components/SectionDivider/SectionDivider';
 import { Link } from 'react-router-dom';
 import placeholderImage from '../../images/compass.png'
+import FeaturedStories from '../../components/FeaturedStories/FeaturedStories.jsx'
 
 export default function StoryDetail(props) {
   const [theStory, setTheStory] = useState({});
@@ -35,9 +36,13 @@ export default function StoryDetail(props) {
             alt={location}
           />
           <section className='section-edit'>{story}</section>
-          <div className='button-section'>
+          {props.user && <div className='button-section'>
             <Link to={`/stories/${id}/edit`}><button className='edit-button'>Edit Story</button></Link>
-          </div>
+          </div>}
+          <div className="featured-stories">
+          <SectionDivider text="Featured Stories"/>
+          <FeaturedStories />
+          </div>  
         </div>
       </div>
     </Layout>
