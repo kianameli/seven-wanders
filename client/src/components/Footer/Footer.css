@@ -24,7 +24,7 @@ footer {
   text-decoration: none;
   font-family: "Sulphur Point", sans-serif;
   font-weight: 800;
-  font-size: 30px;
+  font-size: 2.4em;
   text-align: center;
 }
 
@@ -82,7 +82,6 @@ footer {
   width: 100%;
   text-align: center;
   font-size: 0.9em;
-  gap: 10px;
 }
 
 .continent-links {
@@ -93,12 +92,11 @@ footer {
   width: 100%;
   font-size: 0.9em;
   padding-right: 5vw;
-  font-size: 14px;
 }
 
 .footer-titles {
   font-family: "Sulphur Point", sans-serif;
-  font-size: 24px;
+  font-size: 1.6em;
   vertical-align: baseline;
   text-align: center;
   text-decoration: underline;
@@ -111,7 +109,7 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .c-link-container {
@@ -120,13 +118,14 @@ footer {
   justify-content: space-evenly;
 }
 
-.c-link {
+.c-link,
+.c-link2 {
   display: flex;
   color: white;
   text-decoration: none;
   flex-flow: row wrap;
   flex: 1;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .m-link {
@@ -136,7 +135,7 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .c-link-list1,
@@ -149,6 +148,7 @@ footer {
 .c-link-list1 {
   display: flex;
   width: 50%;
+  white-space: nowrap;
 }
 
 .c-link-list2 {
@@ -158,4 +158,98 @@ footer {
 
 .c-link-list3 {
   display: flex;
+}
+
+.link {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1390px) {
+  .footer-logo {
+    font-size: 2.2em;
+  }
+
+  .footer-titles {
+    font-size: 1.5em;
+  }
+
+  .c-link,
+  .c-link2,
+  .m-link,
+  .f-link,
+  .link {
+    font-size: 0.9em;
+  }
+
+  .footer-block-two {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1251px) {
+  .footer-logo {
+    font-size: 2em;
+  }
+
+  .footer-titles {
+    font-size: 1.4em;
+  }
+
+  .c-link,
+  .c-link2,
+  .m-link,
+  .f-link,
+  .link {
+    font-size: 0.8em;
+  }
+
+  .footer-block-two {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1111px) {
+  .footer-logo {
+    font-size: 1.8em;
+  }
+
+  .footer-titles {
+    font-size: 1.3em;
+  }
+
+  .c-link,
+  .c-link2,
+  .m-link,
+  .f-link,
+  .link {
+    font-size: 0.7em;
+  }
+
+  .c-link {
+    margin-bottom: 3px;
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .footer-logo {
+    font-size: 1.6em;
+  }
+
+  .c-link-container {
+    flex-flow: column wrap;
+  }
+
+  .footer-titles {
+    font-size: 1.2em;
+  }
+
+  .c-link-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .c-link-container {
+    flex-flow: column wrap;
+  }
 }
