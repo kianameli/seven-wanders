@@ -42,10 +42,9 @@
 }
 
 .mapped-images {
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  display: grid;
-  resize:horizontal;
-  grid-template-columns: 40% 40%;
+  dispaly: flex;
+  flex-flow: row wrap;
+  flex: 1 1 30%
   justify-content: space-evenly;
   justify-items: center;
   height: 100vh;
