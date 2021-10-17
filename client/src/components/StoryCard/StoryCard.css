@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  margin-bottom: 10px;
 }
 
 .story-card-image-container p {
@@ -19,7 +20,21 @@
 
 .stories-image {
   margin: 0 auto;
-  width: 350px;
-  height: 350px;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  .stories-image {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .stories-image {
+    width: 40vw;
+    height: 40vw;
+  }
 }
