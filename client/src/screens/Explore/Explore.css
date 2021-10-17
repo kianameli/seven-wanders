@@ -7,7 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 40vh;
   margin-top: 100px;
   margin-bottom: 25px;
   z-index: 0;
@@ -42,9 +42,9 @@
 }
 
 .mapped-images {
-  display: flex;
-  flex: 1 1 30%;
+  dispaly: flex;
   flex-flow: row wrap;
+  flex: 1 1 30%
   justify-content: space-evenly;
   justify-items: center;
   height: 100vh;

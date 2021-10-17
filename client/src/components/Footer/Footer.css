@@ -16,6 +16,7 @@ footer {
   color: white;
   z-index: 0;
   width: 100%;
+  bottom: 0;
 }
 
 .footer-logo {

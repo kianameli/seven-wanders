@@ -40,27 +40,37 @@ nav {
   justify-content: space-evenly;
   font-family: "Open Sans";
   color: black;
-  text-decoration: none;
+  
 }
+  .header-links :link { text-decoration: none; }
+
+
+
 
 .header-welcome {
   display: flex;
   justify-content: flex-end;
   width: 40%;
   font-size: 1.2em;
+  color: black;
 }
 
 .links-container {
   display: flex;
   justify-content: space-evenly;
   width: 60%;
+  color: black;
 }
 
 .header-link {
   font-size: 1.2em;
+  color: black;
 }
 
 .header-link:hover {
   color: #324a51;
   transform: scale(1.1);
+}
+.active {
+  color: black;
 }
