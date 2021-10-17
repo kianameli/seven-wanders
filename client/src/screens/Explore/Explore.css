@@ -44,19 +44,54 @@
 .mapped-images {
   display: flex;
   flex-flow: row wrap;
-  flex: 1 1 30%;
   justify-content: space-evenly;
   justify-items: center;
   height: 100vh;
   overflow-y: auto;
 }
-@media only screen and (max-width: 965px) {
-  .mapped-images {
-    grid-template-rows: 2;
-    grid-template-columns: 40% 40%;
-    padding: 0px;
+
+@media only screen and (min-width: 1110px) {
+  .mapped-images p {
+    font-size: 1.1em;
+  }
+
+  .story-card-container {
+    width: 50vw;
   }
 }
-a {
-  color: black;
+
+@media only screen and (max-width: 965px) {
+  .mapped-images p {
+    font-size: 1em;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .mapped-images p {
+    font-size: 0.9em;
+  }
+
+  .story-card-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mapped-images p {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mapped-images p {
+    font-size: 0.75em;
+  }
+
+  .story-card-container {
+    width: 200px;
+  }
 }
