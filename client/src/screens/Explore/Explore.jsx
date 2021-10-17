@@ -77,9 +77,9 @@ export default function Explore(props) {
   return (
     <Layout user={props.user}>
       <div className='explore-banner-container'>
-        <div className='explore-banner-text'>Explore</div>
-        <div className='search-bar'>
-          <Search handleSearch={handleSearch} handleSubmit={handleSubmit} />
+        <div className='explore-banner-flex'>
+          <div className='explore-banner-text'>Explore</div>
+          <Search className='search-bar' handleSearch={handleSearch} handleSubmit={handleSubmit} />
           {/* <SearchBy handleSearchBy={handleSearchBy} handleSubmit={handleSubmit}/> */}
         </div>
       </div>
