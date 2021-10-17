@@ -17,11 +17,13 @@ export default function Home(props) {
     <Layout user={user}>
       <div className="home-banner-container">
         <div className="home-banner-text">Let's Wander
+          
           <p className="home-banner-description">
             Seven Wanders highlights trips to destinations around our wanderful
             planet. Explore other wanderers' stories for inspiration or tell us
             about your own adventures!
           </p>
+
         </div>
       </div>
       {/* explore section */}
