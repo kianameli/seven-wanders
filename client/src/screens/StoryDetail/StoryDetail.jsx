@@ -22,12 +22,12 @@ export default function StoryDetail(props) {
     }
     fetchStory(id)
     // eslint-disable-next-line
-  }, [])
+  }, [id])
 
   const handleDelete = async (e)=> {
     await deleteStory(_id)
   }
-  
+
   return (
     <Layout user={props.user}>
       <div className='edit-page'>
