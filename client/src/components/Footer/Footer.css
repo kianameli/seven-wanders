@@ -139,8 +139,7 @@ footer {
 }
 
 .c-link-list1,
-.c-link-list2,
-.c-link-list3 {
+.c-link-list2 {
   display: flex;
   flex-direction: column;
 }
@@ -154,14 +153,17 @@ footer {
 .c-link-list2 {
   display: flex;
   width: 50%;
+  margin-bottom: 25px;
 }
 
-.c-link-list3 {
-  display: flex;
+.c-link:hover,
+.c-link2:hover {
+  text-decoration: underline;
 }
 
 .link {
   margin-bottom: 10px;
+  color: black;
 }
 
 @media only screen and (max-width: 1390px) {
