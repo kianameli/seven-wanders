@@ -44,11 +44,6 @@ nav {
 }
   .header-links :link { text-decoration: none; }
 
-  /* .header-links :visited { text-decoration: none; } */
-  
-  /* .header-links :hover { text-decoration: none; } */
-  
-  /* .header-links :active { text-decoration: none; }   */
 
 
 
@@ -57,19 +52,25 @@ nav {
   justify-content: flex-end;
   width: 40%;
   font-size: 1.2em;
+  color: black;
 }
 
 .links-container {
   display: flex;
   justify-content: space-evenly;
   width: 60%;
+  color: black;
 }
 
 .header-link {
   font-size: 1.2em;
+  color: black;
 }
 
 .header-link:hover {
   color: #324a51;
   transform: scale(1.1);
+}
+.active {
+  color: black;
 }
