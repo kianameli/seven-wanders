@@ -42,9 +42,9 @@
 }
 
 .mapped-images {
-  dispaly: flex;
+  display: flex;
   flex-flow: row wrap;
-  flex: 1 1 30%
+  flex: 1 1 30%;
   justify-content: space-evenly;
   justify-items: center;
   height: 100vh;
