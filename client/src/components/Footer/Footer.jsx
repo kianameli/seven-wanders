@@ -55,11 +55,9 @@ const Nav = ({ user }) => {
                 <NavLink className="c-link" to="/">Antarctica</NavLink>
               </div>
               <div className="c-link-list2" style={{"width": "50%", "align-items": "center"}}>
-                <NavLink className="c-link" to="/">Asia</NavLink>
-                <NavLink className="c-link" to="/">Europe</NavLink>
-                <NavLink className="c-link" to="/">Africa</NavLink>
-              </div>
-              <div className="c-link-list3">
+                <NavLink className="c-link2" to="/">Asia</NavLink>
+                <NavLink className="c-link2" to="/">Europe</NavLink>
+                <NavLink className="c-link2" to="/">Africa</NavLink>
               </div>
               </div>
             </div>
