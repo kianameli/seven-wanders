@@ -1,8 +1,8 @@
 .home-banner-container {
   display: flex;
-  display: column;
+  /* display: column;
   align-items: end;
-  justify-content: start;
+  justify-content: start; */
   background-image: url("../../images/33Pol-banner.JPG");
   width: 100%;
   background-position: center;
@@ -12,9 +12,12 @@
   margin-top: 100px;
   margin-bottom: 25px;
   z-index: 0;
+  border: rgb(26, 127, 185) solid 2px;
+
 }
 
 .home-banner-text {
+  border: green solid 2px;
   display: flex;
   color: white;
   background-color: #324a5176;
@@ -31,6 +34,8 @@
 }
 
 .home-banner-description {
+  border: rgb(236, 92, 35) solid 2px;
+
   display: flex;
   align-items: end;
   text-align: left;
