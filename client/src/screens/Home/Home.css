@@ -60,7 +60,13 @@
 
 @media only screen and (max-width: 810px) {
   .explore-section {
-    width: 60vh;
+    height: 55vh;
+  }
+}
+
+@media only screen and (max-width: 463px) {
+  .explore-section {
+    height: 75vh;
   }
 }
 
