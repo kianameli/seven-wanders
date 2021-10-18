@@ -1,24 +1,57 @@
-.header-h1 {
-  text-align: center;
-}
-.section-edit {
-  text-align: center;
-  padding: 50px 0 50px 0;
-}
-.button-section {
-  padding-bottom: 50px;
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Sulphur+Point:wght@700&display=swap');
+
 .edit-page {
   position: relative;
   padding-top: 150px;
 }
+
+.story-detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-story-title {
+  text-align: center;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.detail-story-author {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.detail-story-story {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 85vw;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-indent: 25px;
+  line-height: 2;
+}
+
+.button-section {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+
 .edit-button,
 .delete-button {
   text-align: center;
   color: black;
   background: transparent;
-  border: solid black 2px;
+  border: solid black 1px;
   margin: 15px;
   padding: 10px;
   font-family: "Sulphur Point", sans-serif;
@@ -27,7 +60,12 @@
   cursor: pointer;
 }
 
-.storydetail-image {
+.detail-image-container {
+  display: flex;
+} 
+
+.detail-image {
+  object-fit: cover;
   width: 100%;
-  max-height: 75vh;
+  height: 50vh;
 }
