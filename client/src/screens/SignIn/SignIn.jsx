@@ -26,7 +26,6 @@ const SignIn = (props) => {
     event.preventDefault()
     const { setUser } = props
     try {
-      console.log("onSignIn Form: ", form);
       const user = await signIn(form)
       setUser(user)
       history.push('/')
