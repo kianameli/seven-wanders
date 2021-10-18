@@ -23,7 +23,7 @@
   color: white;
   background-color: #324a5176;
   width: 100%;
-  height: 17vh;
+  height: 125px;
   min-height: 100px;
   max-height: 150px;
   padding-left: 15px;
@@ -34,6 +34,17 @@
   z-index: 1;
 }
 
+.banner-title-p {
+  font-size: 0.9em;
+  margin: 0;
+  margin-top: -15px;
+  padding-top: 25px;
+  margin-bottom: -20px;
+  justify-content: flex-start;
+  width: 10%;
+  white-space: nowrap;
+}
+
 .home-banner-description {
   display: flex;
   text-align: left;
@@ -42,7 +53,6 @@
   height: 45px;
   min-height: 100px;
   max-height: 150px;
-  padding-left: 15px;
   padding-bottom: 15px;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -67,6 +77,24 @@
   .explore-section {
     height: 500px;
   }
+
+  .home-banner-text {
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .home-banner-description {
+    font-size: 0.9em;
+  }
+
+  .home-banner-text {
+    font-size: 1.2em;
+  }
+
+  .banner-title-p {
+    font-size: 1.4em;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -78,6 +106,16 @@
 @media only screen and (max-width: 463px) {
   .explore-section {
     height: 650px;
+  }
+
+  .banner-title-p {
+    padding-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .home-banner-text {
+    height: 160px;
+    max-height: 175px;
   }
 }
 

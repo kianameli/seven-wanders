@@ -15,7 +15,8 @@ export default function Home(props) {
   return (
     <Layout user={user}>
       <div className="home-banner-container">
-        <div className="home-banner-text">Let's Wander
+        <div className="home-banner-text">
+          <p className="banner-title-p">Let's Wander</p>
           
           <p className="home-banner-description">
             Seven Wanders highlights trips to destinations around our wanderful
