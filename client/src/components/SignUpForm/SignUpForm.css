@@ -82,3 +82,20 @@ form {
   cursor: pointer;
   width: 125px;
 }
+
+@media only screen and (max-width: 860px) {
+  .form-container {
+    width: 65vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .sign-up-credentials-container {
+    flex-direction: column;
+  }
+
+  .sign-up-message {
+    width: 80%;
+    text-align: center;
+  }
+}

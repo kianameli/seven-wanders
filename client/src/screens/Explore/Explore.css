@@ -72,13 +72,18 @@
   overflow-y: auto;
 }
 
+.stories-section-mapped-container {
+  margin: 0 auto;
+  width: 98vw;
+}
+
 @media only screen and (min-width: 1110px) {
   .mapped-images p {
     font-size: 1.1em;
   }
 
   .story-card-container {
-    width: 34vw;
+    width: 33vw;
   }
 }
 

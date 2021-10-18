@@ -37,8 +37,9 @@ export default function Home(props) {
       <div className="featured-stories">
 
         <SectionDivider text='Featured Stories' />
-
+        <div className="featured-stories-div-container">
         <FeaturedStories />
+        </div>
       </div>
 
       {/* tell your story */}
