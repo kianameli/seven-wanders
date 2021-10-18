@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-
 .home-banner-container {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +66,12 @@
 @media only screen and (max-width: 810px) {
   .explore-section {
     height: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .story-card-image-container {
+    font-size: 0.75em;
   }
 }
 

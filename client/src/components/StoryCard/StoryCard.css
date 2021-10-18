@@ -42,3 +42,9 @@
     height: 25vw;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .story-card-image-container {
+    font-size: 0.75em;
+  }
+}
