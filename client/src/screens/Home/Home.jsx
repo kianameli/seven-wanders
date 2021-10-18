@@ -9,7 +9,6 @@ export default function Home(props) {
   const { user, setUser, continentFilter, setContinentFilter } = props
 
   function handleContinentClick(continent) {
-    console.log('handleContinentClick called from home')
     setContinentFilter(continent)
   }
 
