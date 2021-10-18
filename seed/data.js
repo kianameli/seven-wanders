@@ -105,68 +105,68 @@ const insertData = async () => {
       location: "Yosemite",
       country: "USA",
       continent: "North America",
-      title: "",
+      title: "S",
       author: "Ian Flaherty",
       userId: user1,
-      story: "",
+      story: "V",
       imageURL:
-        "",
+        "G",
     },
-    {
-      location: "",
-      country: "",
-      continent: "",
-      title: "",
-      author: "Joseph McElroy",
-      userId: user6,
-      story: "",
-      imageURL:
-        "",
-    },
-    {
-      location: "",
-      country: "",
-      continent: "",
-      title: "",
-      author: "Sheeva Shabahang",
-      userId: user4,
-      story: "",
-      imageURL:
-        "",
-    },
-    {
-      location: "",
-      country: "",
-      continent: "",
-      title: "",
-      author: "Kian Ameli",
-      userId: user5,
-      story: "",
-      imageURL:
-        "",
-    },
-    {
-      location: "",
-      country: "",
-      continent: "",
-      title: "",
-      author: "Ian Flaherty",
-      userId: user1,
-      story: "",
-      imageURL:
-        "",
-    },
-    {
-      location: "",
-      country: "",
-      continent: "",
-      title: "",
-      author: "Kian Ameli",
-      userId: user5,
-      story: "",
-      imageURL:
-        "",
-    },
+    // {
+    //   location: "",
+    //   country: "",
+    //   continent: "",
+    //   title: "",
+    //   author: "Joseph McElroy",
+    //   userId: user6,
+    //   story: "",
+    //   imageURL:
+    //     "",
+    // },
+    // {
+    //   location: "",
+    //   country: "",
+    //   continent: "",
+    //   title: "",
+    //   author: "Sheeva Shabahang",
+    //   userId: user4,
+    //   story: "",
+    //   imageURL:
+    //     "",
+    // },
+    // {
+    //   location: "",
+    //   country: "",
+    //   continent: "",
+    //   title: "",
+    //   author: "Kian Ameli",
+    //   userId: user5,
+    //   story: "",
+    //   imageURL:
+    //     "",
+    // },
+    // {
+    //   location: "",
+    //   country: "",
+    //   continent: "",
+    //   title: "",
+    //   author: "Ian Flaherty",
+    //   userId: user1,
+    //   story: "",
+    //   imageURL:
+    //     "",
+    // },
+    // {
+    //   location: "",
+    //   country: "",
+    //   continent: "",
+    //   title: "",
+    //   author: "Kian Ameli",
+    //   userId: user5,
+    //   story: "",
+    //   imageURL:
+    //     "",
+    // },
   ];
 
   await Story.insertMany(stories);
