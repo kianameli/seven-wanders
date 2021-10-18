@@ -1,26 +1,22 @@
 footer {
-  flex: 1;
-  width: 100%;
-  background-color: #324A51;
+  display: flex;
+  width: 100vw;
+  background-color: #324a51;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding: 2vh 0;
 }
 
 .footer-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
-  height: 175px;
   color: white;
   z-index: 0;
   width: 100%;
-}
-
-.footer-block-one {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 30px;
+  bottom: 0;
 }
 
 .footer-logo {
@@ -28,77 +24,234 @@ footer {
   text-decoration: none;
   font-family: "Sulphur Point", sans-serif;
   font-weight: 800;
-  font-size: 38px;
+  font-size: 2.4em;
   text-align: center;
-  margin-bottom: 10px;
 }
 
-.github-logo{
+.github-logo {
   z-index: 1;
-  margin-top: 10px;
-  max-width: 18vw;
+  max-width: 12vw;
+  margin-top: 15px;
+}
+
+.github-image {
+  width: 100%;
+}
+
+.footer-block-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .footer-block-two {
   display: flex;
   flex-direction: column;
-  /* justify-self: flex-start; 
-
-  get all .footer-titles (ie team contact, menu, and continents) to start at same vertical location 
-  */
   align-items: center;
-}
-
-.footer-github-links {
-  display: flex;
-  flex-direction: column;
-  font-family: Open Sans;
-  /* justify-content: space-between;
-  align-content: space-between;
-  text-align: center; 
-
-  get github links to align center with more space between each line
-
-  */
+  justify-content: center;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  height: 100%;
+  width: 100%;
+  font-size: 0.9em;
 }
 
 .footer-block-three {
   display: flex;
   flex-direction: row;
-  margin-right: 30px;
-  /* justify-items: space-between;
-  
-push menu and continents away from each other so that they take up even amounts of last third of footer
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
 
-  */
+.footer-github-links {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  gap: 10px;
 }
 
 .menu-links {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   color: white;
   text-decoration: none;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
 }
 
 .continent-links {
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans";
-  /* flex-direction: column-wrap; 
-  
-  make continents list two columns
-  
-  */
+  flex-wrap: wrap;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  font-size: 0.9em;
+  padding-right: 5vw;
 }
 
 .footer-titles {
   font-family: "Sulphur Point", sans-serif;
+  font-size: 1.6em;
+  vertical-align: baseline;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .f-link {
   color: white;
   text-decoration: none;
   display: flex;
-  /* text-align: center; get links to align center in their respective div */
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  font-size: 1em;
+}
+
+.c-link-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.c-link,
+.c-link2 {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  flex-flow: row wrap;
+  flex: 1;
+  font-size: 1em;
+}
+
+.m-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  font-size: 1em;
+}
+
+.c-link-list1,
+.c-link-list2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-link-list1 {
+  display: flex;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.c-link-list2 {
+  display: flex;
+  width: 50%;
+  margin-bottom: 3vh;
+}
+
+.c-link:hover,
+.c-link2:hover {
+  text-decoration: underline;
+}
+
+.link {
+  margin-bottom: 10px;
+  color: black;
+}
+
+@media only screen and (max-width: 1390px) {
+  .footer-logo {
+    font-size: 2.2em;
+  }
+
+  .footer-titles {
+    font-size: 1.5em;
+  }
+
+  .c-link,
+  .c-link2,
+  .m-link,
+  .f-link,
+  .link {
+    font-size: 0.9em;
+  }
+
+  .footer-block-two {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1251px) {
+  .footer-logo {
+    font-size: 2em;
+  }
+
+  .footer-titles {
+    font-size: 1.4em;
+  }
+
+  .c-link,
+  .c-link2,
+  .m-link,
+  .f-link,
+  .link {
+    font-size: 0.8em;
+  }
+
+  .footer-block-two {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1111px) {
+  .footer-logo {
+    font-size: 1.8em;
+  }
+
+  .footer-titles {
+    font-size: 1.3em;
+  }
+
+  .c-link,
+  .c-link2,
+  .m-link,
+  .f-link,
+  .link {
+    font-size: 0.7em;
+  }
+
+  .c-link {
+    margin-bottom: 3px;
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .footer-logo {
+    font-size: 1.6em;
+  }
+
+  .c-link-container {
+    flex-flow: column wrap;
+  }
+
+  .footer-titles {
+    font-size: 1.2em;
+  }
+
+  .c-link-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .c-link-container {
+    flex-flow: column wrap;
+  }
 }

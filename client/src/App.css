@@ -8,6 +8,6 @@ html {
   background: transparent;  
 }
 
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
+a {
+  color: black;
 }

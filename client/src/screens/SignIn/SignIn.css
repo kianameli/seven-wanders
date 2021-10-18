@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://res.cloudinary.com/dyyjvyqtn/image/upload/v1634169646/Isfahan-music-resized_mfaoym.png");
+  background-image: url("../../images/Isfahan-music-resized.png");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,41 +17,48 @@
   justify-self: center;
   align-items: center;
   background-color: #324a5185;
-  /* opacity: .5; */
   color: white;
   padding: 20px;
-  margin: 75px;
+  margin: 50px;
   width: 50vw;
 }
 
 .sign-in-header {
   font-family: "Sulphur Point", sans-serif;
   font-size: 38px;
-  margin: 50px;
+  font-weight: 900;
 }
 
 .sign-in-input {
-  display: flex;
-  flex-direction: row;
   background-color: #324a51d4;
   border: none;
   color: white;
   font-family: "Open Sans", sans-serif;
-  /* z-index: 3; */
+  margin: 15px;
+  padding: 5px 0 5px 5px;
+  font-size: 18px;
 }
 
 ::placeholder {
   color: white;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .submit-button {
-  color: black;
-  background: white;
-  border: black 2px;
+  text-align: center;
+  color: white;
+  background: transparent;
+  border: solid white 2px;
+  margin: 15px;
   padding: 10px;
-  font-family: "Open Sans", sans-serif;
-  align-self: center;
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
   cursor: pointer;
-  /* z-index: 3; */
+}
+
+@media only screen and (max-width: 860px) {
+  .form-container {
+    width: 70vw;
+  }
 }

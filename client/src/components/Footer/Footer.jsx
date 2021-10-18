@@ -24,7 +24,7 @@ const Nav = ({ user }) => {
       <div className="footer-container">
         <div className="footer-block-one">
           <NavLink className="footer-logo" to="/">Seven Wanders</NavLink>
-          <NavLink className="github-logo" to="https://github.com/kianameli/seven-wanders"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fgithub%2Fgithub_PNG24.png&f=1&nofb=1" alt='github logo'/></NavLink>
+          <NavLink className="github-logo" to="https://github.com/kianameli/seven-wanders"><img className="github-image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fgithub%2Fgithub_PNG24.png&f=1&nofb=1" alt='github logo' /></NavLink>
         </div>
 
         <div className="footer-block-two">
@@ -39,23 +39,30 @@ const Nav = ({ user }) => {
         <div className="footer-block-three">
           <div className="menu-links">
             <h2 className="footer-titles">Menu</h2>
-            {user && <NavLink to="/sign-out">Sign Out</NavLink>}
-            {user && <NavLink to="/story-create">Create</NavLink>}
+            {user && <NavLink className="m-link" to="/sign-out">Sign Out</NavLink>}
+            {user && <NavLink className="m-link" to="/story-create">Create</NavLink>}
             {alwaysOptions}
             {user ? authenticatedOptions : unauthenticatedOptions}
           </div>
 
           <div className="continent-links">
             <h2 className="footer-titles">Continents</h2>
-            <NavLink className="f-link" to="/">North America</NavLink>
-            <NavLink className="f-link" to="/">South America</NavLink>
-            <NavLink className="f-link" to="/">Austrailia</NavLink>
-            <NavLink className="f-link" to="/">Asia</NavLink>
-            <NavLink className="f-link" to="/">Europe</NavLink>
-            <NavLink className="f-link" to="/">Africa</NavLink>
+            <div className="c-link-contanier" style={{"display": "flex", "flex-flow": "row wrap"}}>
+              <div className="c-link-list1" style={{"width": "50%", "align-items": "center"}}>
+                <NavLink className="c-link" to="/">North America</NavLink>
+                <NavLink className="c-link" to="/">South America</NavLink>
+                <NavLink className="c-link" to="/">Australia</NavLink>
+                <NavLink className="c-link" to="/">Antarctica</NavLink>
+              </div>
+              <div className="c-link-list2" style={{"width": "50%", "align-items": "center"}}>
+                <NavLink className="c-link2" to="/">Asia</NavLink>
+                <NavLink className="c-link2" to="/">Europe</NavLink>
+                <NavLink className="c-link2" to="/">Africa</NavLink>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </footer>
   )
 }

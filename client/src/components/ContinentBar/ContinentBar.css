@@ -1,27 +1,38 @@
-.continent-bar{
-  display:flex;
+.continent-bar {
+  display: flex;
+  flex-flow: row wrap;
   flex-direction: row;
   justify-content: space-evenly;
   width: auto;
-  max-width: 100%;
+  max-width: auto;
+  padding: 70px 0 70px 0;
+  flex-flow: row wrap;
 }
 .continent-button {
-width: auto;
-max-width: 100px;
-flex-direction: row;
+  width: auto;
+  flex-direction: row;
 }
 
 .continent-img {
-  
-  background: #324A51;
-  width: 100px;
-  height: 100px;
+  background: #324a51;
+  width: 100px ;
+  height: 100px ;
   border-radius: 50%;
-  
+  padding: 8px;
+  border-color: #324a51;
+  justify-items: center;
+  flex-wrap: wrap;
 }
+
+.continent-button:hover .continent-img {
+  border: solid lightblue 5px;
+}
+
 p {
   text-align: center;
   justify-content: space-evenly;
   width: 100%;
-  
+}
+.continet-title {
+  justify-content: center;
 }

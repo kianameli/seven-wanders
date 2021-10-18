@@ -1,32 +1,90 @@
-.home-page-title {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-}
 
-.home-page-banner {
-  position: relative;
-  z-index: -1;
-  height: 50%;
+.home-banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  display: row;
+  background-image: url("../../images/33Pol-banner.JPG");
   width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  z-index: 0;
+}
 
+.home-banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-end;
+  color: white;
+  background-color: #324a5176;
+  width: 100%;
+  height: 17vh;
+  min-height: 100px;
+  max-height: 150px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  font-family: "Sulphur Point", sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  z-index: 1;
 }
-.home-title-words {
-  position: absolute;
-   top: 1500px;
-   left: 0;
-   width: 100%;
-   margin: 0 auto;
-   width: 800px;
-   height: 50px;
-   color:white;
-   text-align: left;
-}
-.home-title-title{
 
+.home-banner-description {
+  display: flex;
+  text-align: left;
+  color: white;
+  width: 100%;
+  height: 45px;
+  min-height: 100px;
+  max-height: 150px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  z-index: 1;
+  align-items: left;
+  flex-direction: column;
+  align-self: end;
+  line-height: 1.5;
+  font-weight: 400;
 }
-img{
-  position: relative;
-  z-index: -1;
-  height: 50%;
+
+.explore-section {
+  height: 350px;
+}
+
+.featured-stories-div-container {
   width: 100%;
 }
 
+@media only screen and (max-width: 810px) {
+  .explore-section {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 463px) {
+  .explore-section {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .explore-section {
+    height: 800px;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .home-banner-description {
+    font-size: 24px;
+    font-family: "Sulphur Point", sans-serif;
+  }
+}

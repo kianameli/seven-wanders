@@ -1,25 +1,27 @@
 import { Link } from 'react-router-dom'
+import placeholderImage from '../../images/compass.png'
 import './StoryCard.css'
 
 export default function StoryCard(props) {
   const {_id,title,location,country,imageURL}=props.story
   
   return (
+    
+    <div className='story-card-image-container'>
     <Link
       to={`/stories/${_id}`}
       className='story-card-container'
-    >
-      <div className='story-card-image-container'>
-        <img
+      >
+        <img id="stories-image-id" className='stories-image'
           src={imageURL}
+          onError={(e) => { e.target.src = placeholderImage}}
           alt={title}
-          style={{ width: 170, height: 170, borderRadius: 400 / 2 }}
         />
-      </div>
-      <div className='story-card-info'>
-        <p>{title}</p>
-        <p>{location}, {country}</p>
-      </div>
     </Link>
+        <p>{title}</p>
+        <p>{location}, {country} </p>
+      </div>
+      
+          
   )
 }

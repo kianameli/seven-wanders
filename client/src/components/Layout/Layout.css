@@ -7,5 +7,6 @@
 
 .layout-children {
   flex: 2;
+  width: auto;
   
 }

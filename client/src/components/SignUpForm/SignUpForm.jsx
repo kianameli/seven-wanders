@@ -28,7 +28,7 @@ const SignUpForm = (props) => {
     try {
       const user = await signUp(form)
       setUser(user)
-      history.push('/')
+      history.push('/explore')
     } catch (error) {
       console.error(error)
       setForm({
@@ -51,7 +51,7 @@ const SignUpForm = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Submit</button>
+      return <button className='submit-button' type='submit'>Submit</button>
     }
   }
 
@@ -64,34 +64,40 @@ const SignUpForm = (props) => {
           <h1 className='sign-up-header'>Create Account</h1>
           <h3 className='sign-up-message'>Become a member to tell your story</h3>
           <form onSubmit={onSignUp}>
-            <input className='sign-up-input'
-              required
-              type='text'
-              name='username'
-              value={username}
-              placeholder='| Username'
-              onChange={handleChange} />
-            <input className='sign-up-input'
-              required
-              type='email'
-              name='email'
-              value={email}
-              placeholder='| Email Address'
-              onChange={handleChange} />
-            <input className='sign-up-input'
-              required
-              name='password'
-              value={password}
-              type='password'
-              placeholder='| Password'
-              onChange={handleChange} />
-            <input className='sign-up-input'
-              required
-              name='passwordConfirmation'
-              value={passwordConfirmation}
-              type='password'
-              placeholder='| Confirm Password'
-              onChange={handleChange} />
+            <div className='sign-up-credentials-container'>
+              <div className='sign-up-credentials'>
+                <input className='sign-up-input'
+                  required
+                  type='text'
+                  name='username'
+                  value={username}
+                  placeholder='| Username'
+                  onChange={handleChange} />
+                <input className='sign-up-input'
+                  required
+                  type='email'
+                  name='email'
+                  value={email}
+                  placeholder='| Email Address'
+                  onChange={handleChange} />
+              </div>
+              <div className='sign-up-credentials'>
+                <input className='sign-up-input'
+                  required
+                  name='password'
+                  value={password}
+                  type='password'
+                  placeholder='| Password'
+                  onChange={handleChange} />
+                <input className='sign-up-input'
+                  required
+                  name='passwordConfirmation'
+                  value={passwordConfirmation}
+                  type='password'
+                  placeholder='| Confirm Password'
+                  onChange={handleChange} />
+              </div>
+            </div>
             {renderError()}
           </form>
         </div>

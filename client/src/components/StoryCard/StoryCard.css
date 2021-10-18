@@ -1,1 +1,44 @@
+.story-card-container {
+  display: flex;
+  flex-direction: row;
+  width: 370px;
+  height: auto;
+}
 
+.story-card-image-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.story-card-image-container p {
+  margin-top: 10px;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+.stories-image {
+  margin: 0 auto;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  .stories-image {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .story-card-container {
+    width: 34vw;
+  }
+
+  .stories-image {
+    width: 25vw;
+    height: 25vw;
+  }
+}

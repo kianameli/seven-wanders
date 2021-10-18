@@ -1,21 +1,13 @@
-import './StoryEdit.css'
+import '../StoryCreate/StoryCreate.css'
 import { updateStory, getStory } from '../../services/stories'
 import { useEffect, useState } from 'react'
 import Layout from '../../components/Layout/Layout'
+import SectionDivider from '../../components/SectionDivider/SectionDivider'
 import { useParams, Redirect } from 'react-router-dom'
 
 export default function StoryEdit(props) {
-  const [story, setStory] = useState({
-    location: '',
-    country: '',
-    continent: '',
-    title: '',
-    author: '',
-    story: '',
-    imageURL: '',
-    userId: '',
-  });
 
+  const [story, setStory] = useState({ location: '', country: '', continent: '', title: '', author: '', story: '', imageURL: '', userId: '', });
   const [isUpdated, setIsUpdated] = useState(false)
   let { id } = useParams()
 
@@ -37,8 +29,8 @@ export default function StoryEdit(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const updated = await updateStory(id, story)
-    setIsUpdated(updated)
+    await updateStory(id, story)
+    setIsUpdated(prev => !prev)
   }
 
   if (isUpdated) {
@@ -47,62 +39,79 @@ export default function StoryEdit(props) {
 
   return (
     <Layout user={props.user}>
-    <div className='create-form-container'>
-      <form className='create-form' onSubmit={handleSubmit}>
-        <input
-          className='input-title'
-          placeholder='Give your story a title...'
-          value={story.title}
-          name='title'
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className='input-imageUrl'
-          placeholder='e.g., www.abc.com'
-          value={story.imageURL}
-          name='Image-Link'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-location'
-          placeholder='e.g., Maafushi Island'
-          value={story.location}
-          name='Location'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-country'
-          placeholder='e.g., The Maldives'
-          value={story.country}
-          name='country'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-continent'
-          placeholder='e.g., Asia'
-          value={story.continent}
-          name='continent'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-story'
-          placeholder='Write your story here...'
-          value={story.story}
-          name='story'
-          required
-          onChange={handleChange}
-        />
-        <button type='submit' className='submit-button'>
-          Submit
-        </button>
-      </form>
-    </div>
+      <div className='create-banner-container'>
+        <div className='create-banner-text'>Change your story</div>
+      </div>
+      <div className='create-form-container'>
+        <form className='create-form' onSubmit={handleSubmit}>
+
+          <SectionDivider text='Title' />
+          <input
+            className='create-form-input'
+            placeholder={story.title}
+            value={story.title}
+            name='title'
+            required
+            // autoFocus
+            onChange={handleChange}
+          />
+
+          <SectionDivider text='Image Link' />
+          <input
+            className='create-form-input'
+            placeholder={story.imageURL}
+            value={story.imageURL}
+            name='imageURL'
+            required
+            onChange={handleChange}
+          />
+
+          <SectionDivider text='Location' />
+          <input
+            className='create-form-input'
+            placeholder={story.location}
+            value={story.location}
+            name='location'
+            required
+            onChange={handleChange}
+          />
+
+          <SectionDivider text='Country' />
+          <input
+            className='create-form-input'
+            placeholder={story.country}
+            value={story.country}
+            name='country'
+            required
+            onChange={handleChange}
+          />
+
+          <SectionDivider text='Continent' />
+          <select className='create-form-select' name='continent' value={story.continent} onChange={handleChange}>
+            <option className='continent-option' value='North America'>North America</option>
+            <option className='continent-option' value='South America'>South America</option>
+            <option className='continent-option' value='Europe'>Europe</option>
+            <option className='continent-option' value='Asia'>Asia</option>
+            <option className='continent-option' value='Africa'>Africa</option>
+            <option className='continent-option' value='Australia'>Australia</option>
+            <option className='continent-option' value='Antarctica'>Antarctica</option>
+          </select>
+
+          <SectionDivider text='Story' />
+          <textarea
+            className='create-form-input'
+            placeholder={story.story}
+            value={story.story}
+            name='story'
+            required
+            onChange={handleChange}
+            rows={10}
+          />
+
+          <button type='submit' className='edit-submit-button'>Save</button>
+
+        </form>
+      </div>
     </Layout>
   )
 }
