@@ -40,7 +40,7 @@ export default function StoryEdit(props) {
   return (
     <Layout user={props.user}>
       <div className='create-banner-container'>
-        <h4 className='create-banner-text'>Change your story</h4>
+        <div className='create-banner-text'>Change your story</div>
       </div>
       <div className='create-form-container'>
         <form className='create-form' onSubmit={handleSubmit}>
