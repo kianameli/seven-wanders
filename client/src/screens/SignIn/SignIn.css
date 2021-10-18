@@ -56,3 +56,9 @@
   font-size: 18px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 860px) {
+  .form-container {
+    width: 70vw;
+  }
+}

@@ -12,7 +12,7 @@ export default function StoryCard(props) {
       to={`/stories/${_id}`}
       className='story-card-container'
       >
-        <img className='stories-image'
+        <img id="stories-image-id" className='stories-image'
           src={imageURL}
           onError={(e) => { e.target.src = placeholderImage}}
           alt={title}

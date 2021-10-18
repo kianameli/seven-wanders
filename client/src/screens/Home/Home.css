@@ -2,8 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   display: row;
-  /* align-items: flex-start; */
-  /* justify-content: start; */
   background-image: url("../../images/33Pol-banner.JPG");
   width: 100%;
   background-position: center;
@@ -13,13 +11,9 @@
   margin-top: 100px;
   margin-bottom: 25px;
   z-index: 0;
-  /* border: rgb(26, 127, 185) solid 2px; */
- 
-
 }
 
 .home-banner-text {
-  /* border: green 2px; */
   display: flex;
   color: white;
   background-color: #324a5176;
@@ -28,7 +22,6 @@
   min-height: 100px;
   max-height: 150px;
   padding-left: 15px;
-  /* padding-bottom: 5px; */
   font-family: "Sulphur Point", sans-serif;
   font-size: 34px;
   font-weight: 800;
@@ -37,19 +30,9 @@
   flex-direction: column;
   align-self: flex-end;
   position: relative;
+}
 
-}
-@media only screen and (max-width: 319px) {
 .home-banner-description {
-  font-size: 24px;
-  font-family: "Sulphur Point", sans-serif;
-}
-}
-.home-banner-description {
-  /* border: rgb(236, 92, 35) solid 2px; */
-/* position: relative; */
-  /* display: flex; */
-  /* align-items: flex-end; */
   text-align: left;
   color: white;
   width: 100%;
@@ -58,7 +41,6 @@
   max-height: 150px;
   padding-left: 15px;
   padding-bottom: 15px;
-  /* padding-bottom: 5px; */
   font-family: "Sulphur Point", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -66,4 +48,25 @@
   align-items: left;
   flex-direction: column;
   align-self: center;
+}
+
+.explore-section {
+  height: 45vh;
+}
+
+.featured-stories-div-container {
+  width: 100%;
+}
+
+@media only screen and (max-width: 810px) {
+  .explore-section {
+    width: 60vh;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .home-banner-description {
+    font-size: 24px;
+    font-family: "Sulphur Point", sans-serif;
+  }
 }
