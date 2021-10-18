@@ -246,12 +246,43 @@ footer {
   }
 
   .c-link-container {
-    flex-direction: column;
+    flex-flow: colum wrap;
+    align-items: center;
+  }
+
+  .github-logo {
+    max-width: 20vw;
   }
 }
 
-@media only screen and (max-width: 795px) {
-  .c-link-container {
-    flex-flow: column wrap;
+@media only screen and (max-width: 463px) {
+  .footer-titles {
+    font-size: 1.1em;
+  }
+
+  .github-logo {
+    max-width: 24vw;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .footer-titles {
+    font-size: 1.05em;
+  }
+
+  .footer-block-two {
+    width: 120%;
+  }
+
+  .footer-block-three {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-size: 1.2em;
+  }
+
+  .github-logo {
+    max-width: 22vw;
   }
 }

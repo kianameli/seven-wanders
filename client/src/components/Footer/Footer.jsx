@@ -47,7 +47,7 @@ const Nav = ({ user }) => {
 
           <div className="continent-links">
             <h2 className="footer-titles">Continents</h2>
-            <div className="c-link-contanier" style={{"display": "flex", "flex-flow": "row wrap"}}>
+            <div className="c-link-container">
               <div className="c-link-list1" style={{"width": "50%", "align-items": "center"}}>
                 <NavLink className="c-link" to="/">North America</NavLink>
                 <NavLink className="c-link" to="/">South America</NavLink>
