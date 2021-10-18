@@ -51,7 +51,7 @@
 }
 
 .explore-section {
-  height: 45vh;
+  height: 350px;
 }
 
 .featured-stories-div-container {
@@ -60,19 +60,19 @@
 
 @media only screen and (max-width: 810px) {
   .explore-section {
-    height: 55vh;
+    height: 500px;
   }
 }
 
 @media only screen and (max-width: 463px) {
   .explore-section {
-    height: 75vh;
+    height: 650px;
   }
 }
 
 @media only screen and (max-width: 360px) {
   .explore-section {
-    height: 95vh;
+    height: 800px;
   }
 }
 

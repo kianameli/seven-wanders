@@ -78,7 +78,7 @@
 }
 
 .continent-bar-div {
-  height: 50vh;
+  height: 350px;
 }
 
 @media only screen and (min-width: 1110px) {
@@ -103,7 +103,7 @@
 
 @media only screen and (max-width: 811px) {
   .continent-bar-div {
-    height: 60vh;
+    height: 450px;
   }
 }
 
@@ -135,6 +135,11 @@
 
 @media only screen and (max-width: 463px) {
   .continent-bar-div {
-    width: 75vh;
+    height: 650px;
+  }
+}
+@media only screen and (max-width: 347px) {
+  .continent-bar-div {
+    height: 800px;
   }
 }
