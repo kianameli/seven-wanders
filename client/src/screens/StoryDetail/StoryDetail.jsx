@@ -35,7 +35,7 @@ export default function StoryDetail(props) {
     <Layout user={props.user}>
       <div className='edit-page'>
         <div className='story-detail-container'>
-          <SectionDivider text={`${country}, ${continent}`} />
+          <SectionDivider text={`${location}, ${country}`} />
           <h1 className='detail-story-title'>{`${title}`}</h1>
           <p className='detail-story-author'>by {author}</p>
           <div className='detail-image-container'>
