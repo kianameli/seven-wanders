@@ -59,13 +59,13 @@ const insertData = async () => {
       location: "Amsterdam",
       country: "Netherlands",
       continent: "Europe",
-      title: "The origins of the windmill",
+      title: "The Origins of the Dutch Windmill",
       author: "Sheeva Shabahang",
       userId: user4,
       story:
-        " this one time i was in Amsterdam... There were so many pretty red lights on the streets and the water was crystal brown. ",
+        "Some people love Amsterdam for the debauchery, but for me, I love Amsterdam for its ingenious engineering solutions. One example is the quintessential Dutch windmill. The windmills were initially used to grind grain into flour, but eventually all kinds of industrial applications were added. For example, structural beauties pressed oil, made paint, and could even saw tree trunks! Thanks to this tool, cities such as Amsterdam became the first industrial centers in the Netherlands. The things you learn when you leave the coffee shop are pretty neat and I recommend venturing out as much as possible in a city as marvelous as this one.",
       imageURL:
-        "https://res.cloudinary.com/dyyjvyqtn/image/upload/v1633964005/Amsterdam_vq1kht.jpg",
+        "https://res.cloudinary.com/dyyjvyqtn/image/upload/v1634517886/Amsterdam_m0ea93.jpg",
     },
     {
       location: "Berlin",
