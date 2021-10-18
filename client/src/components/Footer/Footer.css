@@ -157,13 +157,15 @@ footer {
 }
 
 .c-link:hover,
-.c-link2:hover {
+.c-link2:hover,
+.link:hover {
   text-decoration: underline;
 }
 
 .link {
   margin-bottom: 10px;
-  color: black;
+  color: white;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 1390px) {
@@ -252,6 +254,10 @@ footer {
 
   .github-logo {
     max-width: 20vw;
+  }
+
+  .continent-links {
+    padding-right: 0;
   }
 }
 
