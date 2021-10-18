@@ -3,25 +3,25 @@ import placeholderImage from '../../images/compass.png'
 import './StoryCard.css'
 
 export default function StoryCard(props) {
-  const {_id,title,location,country,imageURL}=props.story
-  
+  const { _id, title, location, country, imageURL } = props.story
+
   return (
-    
+
     <div className='story-card-image-container'>
-    <Link
-      to={`/stories/${_id}`}
-      className='story-card-container'
+      <Link
+        to={`/stories/${_id}`}
+        className='story-card-container'
       >
         <img id="stories-image-id" className='stories-image'
           src={imageURL}
-          onError={(e) => { e.target.src = placeholderImage}}
+          onError={(e) => { e.target.src = placeholderImage }}
           alt={title}
         />
-    </Link>
-        <p>{title}</p>
-        <p>{location}, {country} </p>
-      </div>
-      
-          
+      </Link>
+      <p className="story-card-text">{title}</p>
+      <p className="story-card-text">{location}, {country} </p>
+    </div>
+
+
   )
 }
