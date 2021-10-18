@@ -24,30 +24,38 @@ export default function StoryDetail(props) {
     // eslint-disable-next-line
   }, [id])
 
-  const handleDelete = async (e)=> {
+  const handleDelete = async (e) => {
     await deleteStory(_id)
   }
 
   return (
     <Layout user={props.user}>
       <div className='edit-page'>
-        <div className='edit-page-details'>
+        <div className='story-detail-container'>
           <SectionDivider text={`${country}, ${continent}`} />
-          <h1 className='header-h1'>{`${title}`}</h1>
-          <p>by {author}</p>
-          <img src={imageURL}
-            onError={(e) => { e.target.src = placeholderImage}}
-            alt={location}
-          />
-          <section className='section-edit'>{story}</section>
-          {props.user && <div className='button-section'>
-            <Link to={`/stories/${id}/edit`}><button className='edit-button'>Edit Story</button></Link>
-            <Link to={`/explore`}><button className='delete-button' onClick={handleDelete}>Delete Story</button></Link>
-          </div>}
+          <h1 className='detail-story-title'>{`${title}`}</h1>
+          <p className='detail-story-author'>by {author}</p>
+          <div className='detail-image-container'>
+            <img src={imageURL}
+              onError={(e) => { e.target.src = placeholderImage }}
+              alt={location}
+              className='detail-image'
+            />
+          </div>
+
+          <div className='detail-story-story'>
+            <section>{story}</section>
+            {props.user && <div className='button-section'>
+              <Link to={`/stories/${id}/edit`}><button className='edit-button'>Edit</button></Link>
+              <Link to={`/explore`}><button className='delete-button' onClick={handleDelete}>Delete</button></Link>
+            </div>}
+          </div>
+
+
           <div className="featured-stories">
-          <SectionDivider text="Featured Stories"/>
-          <FeaturedStories />
-          </div>  
+            <SectionDivider text="Featured Stories" />
+            <FeaturedStories />
+          </div>
         </div>
       </div>
     </Layout>

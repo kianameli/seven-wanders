@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+
 .home-banner-container {
   display: flex;
   flex-wrap: wrap;
@@ -15,6 +18,9 @@
 
 .home-banner-text {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-end;
   color: white;
   background-color: #324a5176;
   width: 100%;
@@ -22,17 +28,15 @@
   min-height: 100px;
   max-height: 150px;
   padding-left: 15px;
+  padding-bottom: 10px;
   font-family: "Sulphur Point", sans-serif;
   font-size: 34px;
   font-weight: 800;
   z-index: 1;
-  align-items: flex-start;
-  flex-direction: column;
-  align-self: flex-end;
-  position: relative;
 }
 
 .home-banner-description {
+  display: flex;
   text-align: left;
   color: white;
   width: 100%;
@@ -41,13 +45,15 @@
   max-height: 150px;
   padding-left: 15px;
   padding-bottom: 15px;
-  font-family: "Sulphur Point", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 800;
   z-index: 1;
   align-items: left;
   flex-direction: column;
-  align-self: center;
+  align-self: end;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .explore-section {
