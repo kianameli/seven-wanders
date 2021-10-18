@@ -3,6 +3,7 @@
   flex-direction: row;
   width: 370px;
   height: auto;
+  margin-top: 50px;
 }
 
 .story-card-image-container {
@@ -16,6 +17,10 @@
   margin-top: 10px;
   margin-bottom: -3px;
   padding: 0;
+}
+
+.story-card-text {
+  font-family: "Open Sans", sans-serif;
 }
 
 .stories-image {

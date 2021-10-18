@@ -37,4 +37,6 @@ p {
 }
 .continet-title {
   justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
 }
