@@ -85,8 +85,10 @@ export default function Explore(props) {
       </div>
 
       <SectionDivider text='Continents' />
+      <div className="continent-bar-div">
       <p>{continentFilter}</p>
       <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={false} />
+      </div>
 
       <SectionDivider text='Stories' />
       <div className='stories-section'>
