@@ -77,6 +77,10 @@
   width: 98vw;
 }
 
+.continent-bar-div {
+  height: 50vh;
+}
+
 @media only screen and (min-width: 1110px) {
   .mapped-images p {
     font-size: 1.1em;
@@ -94,6 +98,12 @@
 
   a {
     color: black;
+  }
+}
+
+@media only screen and (max-width: 811px) {
+  .continent-bar-div {
+    height: 60vh;
   }
 }
 
@@ -120,5 +130,11 @@
 
   .story-card-container {
     width: 200px;
+  }
+}
+
+@media only screen and (max-width: 463px) {
+  .continent-bar-div {
+    width: 75vh;
   }
 }
