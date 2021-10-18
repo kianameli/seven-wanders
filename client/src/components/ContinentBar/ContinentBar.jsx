@@ -21,7 +21,7 @@ export default function ContinentBar(props) {
     <div className='continent-bar'>
       {continents.map((continent, index) => {
         const content = (
-            <div className='continent-button'    
+          <div className={continent.name === props.continentFilter ? 'continent-button-selected' : 'continent-button'}
             onClick={(e) => {
              //e.preventDefault();
               props.handleContinentClick(continent.name);

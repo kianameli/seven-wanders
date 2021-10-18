@@ -54,10 +54,16 @@ export default function Explore(props) {
   //   console.log(stories[0].title,searchValue,searchResults)
   // }
   function handleContinentClick(continent) {
-    const results = stories.filter(story => {
-      return (story.continent === continent)
-    })
-    setContinentFilter(continent)
+    let results
+    if (continent === continentFilter) {
+      results = stories
+      setContinentFilter(prev=>'')
+    } else {
+      results = stories.filter(story => {
+        return (story.continent === continent)
+      })
+      setContinentFilter(continent)
+    } 
     setSearchResults(results)
   }
 
@@ -86,7 +92,6 @@ export default function Explore(props) {
 
       <SectionDivider text='Continents' />
       <div className="continent-bar-div">
-      <p>{continentFilter}</p>
       <ContinentBar continentFilter={continentFilter} setContinentFilter={setContinentFilter} handleContinentClick={handleContinentClick} linksOn={false} />
       </div>
 
