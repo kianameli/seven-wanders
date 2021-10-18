@@ -10,6 +10,7 @@ import FeaturedStories from '../../components/FeaturedStories/FeaturedStories.js
 
 export default function StoryDetail(props) {
   const [theStory, setTheStory] = useState({});
+  const [isLoading,setIsLoading]=useState(true)
   //keeping _id for postMVP user edit auth
   // eslint-disable-next-line
   const { _id, title, location, country, continent, author, story, imageURL } = theStory
@@ -19,6 +20,7 @@ export default function StoryDetail(props) {
     const fetchStory = async (storyID) => {
       const aStory = await getStory(storyID)
       setTheStory(aStory)
+      setIsLoading(false)
     }
     fetchStory(id)
     // eslint-disable-next-line
@@ -28,6 +30,7 @@ export default function StoryDetail(props) {
     await deleteStory(_id)
   }
 
+  if (isLoading){return (<h2>Loading...</h2>)}
   return (
     <Layout user={props.user}>
       <div className='edit-page'>
