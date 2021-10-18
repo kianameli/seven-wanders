@@ -57,6 +57,13 @@ Seven Wanders is a travel blog where users can find and read user-submitted trav
 
 ## Component Hierarchy
 
+<details>
+<summary>Component hierarchy</summary>
+
+![alt text](./readme-assets/component-hierarchy/ComponentHierarchy.png)
+
+</details>
+
 ## Schemas
 
 ### Story schema
